@@ -1,9 +1,9 @@
-const NewRelease=()=>{
+const CampYabbHouse=()=>{
   return(
     <div className="text-white bg-black w-screen">
-      hiii newrel
+      hiii ddd  
     </div>
   )
   }
   
-  export default NewRelease;
+  export default CampYabbHouse;

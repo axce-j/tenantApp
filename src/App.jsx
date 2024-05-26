@@ -1,19 +1,25 @@
 import { Route, Routes } from "react-router-dom";
-import Top from "./Pages/top.jsx"
+import Welcome from "./Pages/welcome.jsx"
 import Home from "./Pages/home.jsx"
-import Trending from "./Pages/trending.jsx" 
-import NewRelease from "./Pages/newRelease.jsx"
-import ReadMangaPage from "./Pages/readMangaPage.jsx"
+import CampYabbHouse from "./Pages/campYabbHouse.jsx" 
+import ChantierHouse from "./Pages/chantierHouse.jsx"
+import GarRouteHouse from "./Pages/garRouteHouse.jsx"
+import VillageHouse from "./Pages/villageHouse.jsx"
 function App() {
   return (
-    <Routes>
-      <Route path="/"  element={<Top/>} />
+    <div className=" bg-[rgba(4,12,28,.8)] h-screen w-screen">
+
+<Routes>
+      <Route path="/"  element={<Welcome/>} />
       <Route path="/home"  element={<Home/>}  />
-      <Route path="/trending" element={<Trending/>} />
-      <Route path="/newRelease"element={<NewRelease/>} /> 
-      <Route path="/readManga" element={<ReadMangaPage/>} />
+      <Route path="/campYabbassi" element={<CampYabbHouse/>} />
+      <Route path="/chantier"element={<ChantierHouse/>} /> 
+      <Route path="/gareRoutier" element={<GarRouteHouse/>} />
+      <Route path="/village" element={<VillageHouse/>} />
       <Route path="error"/>
     </Routes>
+    </div>
+    
   );
 }
 

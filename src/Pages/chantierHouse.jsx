@@ -1,9 +1,9 @@
-const Trending=()=>{
+const ChantierHouse=()=>{
   return(
     <div className="text-white bg-black w-screen">
-      hiii Top
+      hiii newrel
     </div>
   )
   }
   
-  export default Trending;
+  export default ChantierHouse;
