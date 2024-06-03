@@ -8,14 +8,14 @@ const Welcome = () => {
 
 
         <div className="flex items-center gap-3">
-          <div className="text-white font-bold text-5xl text-center">
+          <div className="text-white font-bold mobile:text-xl sm:text-5xl text-center">
             Welcome
           </div>
-          <img  className="w-24 h-24 cursor-pointer" onClick={()=>handleNaviagtiontoHomePage()}  src={nextButton} alt="photo" />
+          <img  className="mobile:w-12 mobile:h-12 sm:w-24 sm:h-24 cursor-pointer" onClick={()=>handleNaviagtiontoHomePage()}  src={nextButton} alt="photo" />
         </div>
 
         <div
-          className="bg-white w-72 h-72 flex items-center justify-center  text-[rgba(193,242,217)] font-bold text-xl animate-bounce-effect cursor-pointer"
+          className="bg-white mobile:w-48 mobile:h-48  sm:w-72 sm:h-72 flex items-center justify-center  text-[rgba(193,242,217)] font-bold mobile:text-sm sm:text-xl animate-bounce-effect cursor-pointer"
           style={{
             borderRadius: "20% 65% 34% 66% / 59% 64% 36% 41%",
             backgroundColor: " rgb(27,232,186)",

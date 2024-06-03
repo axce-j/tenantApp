@@ -4,15 +4,15 @@ import AllFunctions from "../components/functions";
 const Home = () => {
   const {handleNaviagtiontoHouse}= AllFunctions();
   return (
-    <div className=" w-full h-[100vh]">
-          <div className=" pl-12 text-medium font-medium italic text-[rgba(225,225,225,0.8)] ">  
+    <div className="  w-full h-[100vh]">
+          <div className=" pl-4 pt-2 sm:pl-12 mobile:text-[10px] lgMobile:text-[10px] text-medium font-medium italic text-[rgba(225,225,225,0.8)] ">  
             Mr chinedu House Collection
           </div>
       <div className=" w-full flex flex-col gap-12 justify-center items-center pt-16">
         
 
       <div className="flex flex-col gap-12 justify-center items-center">
-          <div className="  text-white text-2xl font-bold">
+          <div className="  text-white sm:text-2xl mobile:text-[12px] lgMobile:text-base font-bold">
             Choose Which House to view details
           </div>
 
@@ -22,9 +22,10 @@ const Home = () => {
 
 
       <div className="w-full flex justify-center">
-        <div className="  grid grid-cols-4   gap-9  ">
+        <div className="  grid lg:grid-cols-4 grid-cols-2  gap-9  ">
           <div
-            className="bg-white w-72 h-72 flex items-center justify-center  text-[rgba(193,242,217)] font-bold text-xl cursor-pointer"
+          
+            className="bg-white mobile:w-24 mobile:h-24  lgMobile:w-32 lgMobile:h-32 sm:w-48 sm:h-48 xl:w-64 xl:h-64 flex items-center justify-center  text-[rgba(193,242,217)] font-bold mobile:text-[8px] sm:text-xs xl:text-xl     cursor-pointer"
             style={{
               borderRadius: "20% 65% 34% 66% / 59% 64% 36% 41%",
               backgroundColor: " rgb(27,232,186)",
@@ -33,6 +34,7 @@ const Home = () => {
               // boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
               backdropFilter: "blur( 9.5px )",
               WebkitBackdropFilter: "blur( 9.5px )",
+              transition:"width 0.5s ease-in, height 0.5s ease-in"
             }}
             onClick={() => handleNaviagtiontoHouse("campYabbassi")}
           >
@@ -40,7 +42,8 @@ const Home = () => {
           </div>
 
           <div
-            className="bg-white w-72 h-72 flex items-center justify-center  text-[rgba(193,242,217)] font-bold text-xl cursor-pointer"
+          
+            className="bg-white mobile:w-24 mobile:h-24 lgMobile:w-32 lgMobile:h-32 sm:w-48 sm:h-48 xl:w-64 xl:h-64 flex items-center justify-center  text-[rgba(193,242,217)] font-bold mobile:text-[8px]   sm:text-xs xl:text-xl    cursor-pointer"
             style={{
               borderRadius: "20% 65% 34% 66% / 59% 64% 36% 41%",
               backgroundColor: " rgb(27,232,186)",
@@ -49,6 +52,7 @@ const Home = () => {
               // boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
               backdropFilter: "blur( 9.5px )",
               WebkitBackdropFilter: "blur( 9.5px )",
+              transition:"width 0.5s ease-in, height 0.5s ease-in"
             }}
             onClick={() => handleNaviagtiontoHouse("gareRoutier")}
           >
@@ -56,7 +60,8 @@ const Home = () => {
           </div>
 
           <div
-            className="bg-white w-72 h-72 flex items-center justify-center  text-[rgba(193,242,217)] font-bold text-xl  cursor-pointer"
+          
+            className="bg-white mobile:w-24 mobile:h-24 lgMobile:w-32 lgMobile:h-32 sm:w-48 sm:h-48 xl:w-64 xl:h-64 flex items-center justify-center  text-[rgba(193,242,217)] font-bold mobile:text-[8px] sm:text-xs xl:text-xl   cursor-pointer"
             style={{
               borderRadius: "20% 65% 34% 66% / 59% 64% 36% 41%",
               backgroundColor: " rgb(27,232,186)",
@@ -65,6 +70,7 @@ const Home = () => {
               // boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
               backdropFilter: "blur( 9.5px )",
               WebkitBackdropFilter: "blur( 9.5px )",
+              transition:"width 0.5s ease-in, height 0.5s ease-in"
             }}
             onClick={() => handleNaviagtiontoHouse("village")}
           >
@@ -72,7 +78,8 @@ const Home = () => {
           </div>
 
           <div
-            className="bg-white w-72 h-72 flex items-center justify-center  text-[rgba(193,242,217)] font-bold text-xl  cursor-pointer"
+          
+            className="bg-white mobile:w-24 mobile:h-24 lgMobile:w-32 lgMobile:h-32 sm:w-48 sm:h-48 xl:w-64 xl:h-64 flex items-center justify-center  text-[rgba(193,242,217)] font-bold mobile:text-[8px] sm:text-xs xl:text-xl    cursor-pointer"
             style={{
               borderRadius: "20% 65% 34% 66% / 59% 64% 36% 41%",
               backgroundColor: " rgb(27,232,186)",
@@ -81,6 +88,7 @@ const Home = () => {
               // boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
               backdropFilter: "blur( 9.5px )",
               WebkitBackdropFilter: "blur( 9.5px )",
+              transition:"width 0.5s ease-in, height 0.5s ease-in"
             }}
             onClick={() => handleNaviagtiontoHouse("chantier")}
           >
