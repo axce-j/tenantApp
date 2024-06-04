@@ -75,8 +75,8 @@ const VillageHouse = () => {
         </Box>
       </div>
       <div className="w-full grid mobile:grid-cols-[auto] sm:grid-cols-[auto,1fr] gap-3 ">
-        <div className=" flex flex-col justify-center items-center gap-6 p-4">
-          <div className="flex gap-4 items-center ">
+        <div className=" flex flex-col sm:justify-center  mobile:justify-center mobile:items-start sm:items-center gap-6 p-4 overflow-x-scroll">
+          <div className="flex gap-4 pl-4 items-center ">
             <span>Appartments</span>{" "}
             <AddIcon
               className="bg-[rgba(22,221,132,.5)] p-2 font-bold rounded-full"
@@ -92,19 +92,19 @@ const VillageHouse = () => {
                 return (
                   <div
                     key={index}
-                    className="sm:w-48 sm:h-48 mobile:w-32 mobile:h-32 flex flex-col justify-center items-center relative"
+                    className="sm:w-48 sm:h-48 mobile:w-24 mobile:h-24 flex flex-col justify-center items-center relative"
                     style={{
                       borderRadius: "36% 37% 27% 30% / 45% 33% 48% 52%",
                       background: "rgba( 81, 90, 85, 0.8 )",
-                      boxShadow: "0 8px 42px 0 rgba( 21, 138, 35, 0.37 )",
+                      boxShadow: "0 5px 17px 0 rgba( 21, 138, 35, 0.37 )",
                       backdropFilter: "blur( 7.5px )",
                       WebkitBackdropFilter: "blur( 7.5px )",
                     }}
                   >
-                    <Box className=" flex justify-center items-center bg-[rgba(22,221,132,.5)] sm:w-12 sm:h-12 mobile:w-6  mobile:h-6 rounded-full p-2 sm:text-[10px] mobile:text-[6px] font-bold absolute top-5 left-4">
+                    <Box className=" flex justify-center items-center bg-[rgba(22,221,132,.5)] sm:w-12 sm:h-12 mobile:w-6  mobile:h-6 rounded-full p-2 sm:text-[10px] mobile:text-[6px] font-bold absolute sm:top-5 mobile:top-2 left-4">
                       {items[0]}
                     </Box>
-                    <Box className="pt-2 mobile:text-[12px] sm:text-base text-center  font-bold">
+                    <Box className="pt-2 mobile:text-[8px] sm:text-base text-center  font-bold">
                       {items[1]}
                     </Box>
                   </div>
