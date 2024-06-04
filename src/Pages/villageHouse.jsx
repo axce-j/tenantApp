@@ -74,9 +74,9 @@ const VillageHouse = () => {
           </span>
         </Box>
       </div>
-      <div className="w-full grid mobile:grid-cols-[auto] sm:grid-cols-[auto,1fr] gap-3 ">
-        <div className=" flex flex-col sm:justify-center  mobile:justify-center mobile:items-start sm:items-center gap-6 p-4 overflow-x-scroll">
-          <div className="flex gap-4 pl-4 items-center ">
+      <div className="w-full grid mobile:grid-cols-[auto] lg:grid-cols-[20%,1fr] gap-3 ">
+        <div className=" flex flex-col sm:justify-center  mobile:justify-center mobile:items-start sm:items-center gap-6 p-1 mobile:overflow-x-scroll lgMobile:overflow-visible">
+          <div className="flex gap-4 mobile:pl-4 items-center ">
             <span>Appartments</span>{" "}
             <AddIcon
               className="bg-[rgba(22,221,132,.5)] p-2 font-bold rounded-full"
@@ -86,13 +86,14 @@ const VillageHouse = () => {
             
             </span> */}
           </div>
-          <div className="mobile:flex mobile: gap-2  sm:grid sm:grid-cols-4 sm:gap-5 ">
+          <div className=" flex mobile:gap-5 lg:flex-col sm:gap-4  ">
+          {/* mobile:flex mobile:gap-2  sm:grid grid-cols-4 sm:gap-5 */}
             {tenantsNames &&
               tenantsNames?.map((items, index) => {
                 return (
                   <div
                     key={index}
-                    className="sm:w-48 sm:h-48 mobile:w-24 mobile:h-24 flex flex-col justify-center items-center relative"
+                    className="lg:w-48  lg:h-24 mobile:w-24 mobile:h-24 sm:w-32 sm:h-32 flex flex-col justify-center items-center relative"
                     style={{
                       borderRadius: "36% 37% 27% 30% / 45% 33% 48% 52%",
                       background: "rgba( 81, 90, 85, 0.8 )",
@@ -101,10 +102,10 @@ const VillageHouse = () => {
                       WebkitBackdropFilter: "blur( 7.5px )",
                     }}
                   >
-                    <Box className=" flex justify-center items-center bg-[rgba(22,221,132,.5)] sm:w-12 sm:h-12 mobile:w-6  mobile:h-6 rounded-full p-2 sm:text-[10px] mobile:text-[6px] font-bold absolute sm:top-5 mobile:top-2 left-4">
+                    <Box className=" flex justify-center items-center bg-[rgba(22,221,132,.5)] sm:w-10 sm:h-10 mobile:w-6  mobile:h-6 rounded-full p-2 lg:text-[10px] mobile:text-[6px] sm:text-xs font-bold absolute lg:top-4 mobile:top-2 mobile:left-4 lg:left-3">
                       {items[0]}
                     </Box>
-                    <Box className="pt-2 mobile:text-[8px] sm:text-base text-center  font-bold">
+                    <Box className="pt-2 mobile:text-[8px] sm:text-[12px] lg:absolute lg:bottom-5 lg:right-6 lg:text-base text-center  font-bold">
                       {items[1]}
                     </Box>
                   </div>
