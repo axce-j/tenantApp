@@ -9,12 +9,10 @@ import {
   Card,
   CardBody,
   CardFooter,
-  Editable,
-  EditablePreview,
-  EditableTextarea,
+   
   Heading,
   Image,
-  Input,
+   
   Stack,
   Tab,
   TabList,
@@ -24,9 +22,49 @@ import {
 } from "@chakra-ui/react";
 
 const VillageHouse = () => {
+  // to be deleted later
+
+  const tenantsNames = [
+    ["App1", "Mr Guenebe Louis"],
+    ["App2", "Mr Hamadou"],
+    ["App3", "Mr aksodh"],
+    ["App4", "MrXYZAS"],
+  ];
+
+  const tenantDetails = [
+    [
+      [tenantImage],
+      [
+        ["1", "Mr Guenebe Louis", "200000xaf", "23-06-2020"],
+        ["1", "200,000XAF", "1Y  5M  16D", "600,000XAF", "3 months unpaid"],
+      ],
+    ],
+    [
+      [tenantImage2],
+      [
+        ["2", "Mr Hamadou", "200000xaf", "23-06-2022"],
+        ["2", "200,000XAF", "1Y  2M  19D", "200,000XAF", "1 month unpaid"],
+      ],
+    ],
+    [
+      [tenantImage3],
+      [
+        ["3", "Mr aksodh", "200000xaf", "13-12-2018"],
+        ["3", "180,000XAF", "3Y  2M  29D", "2,160,000XAF", "12 months unpaid"],
+      ],
+    ],
+    [
+      [tenantImage4],
+      [
+        ["4", "Mr Xyzas", "200000xaf", "20-08-2022"],
+        ["1", "200,000XAF", "2Y  1M  16D", "0XAF", "0 months unpaid"],
+      ],
+    ]
+  ];
+
   return (
-    <div className="text-white w-full flex flex-col gap-12">
-      <div className=" pt-8 flex flex-col gap-4 justify-center items-center w-full">
+    <div className="text-white w-full flex flex-col gap-8">
+      <div className=" pt-4 flex flex-col gap-4 justify-center items-center w-full">
         <Box className="text-5xl text-green-400 font-bold">Village House</Box>
         <Box className="text-xs">
           <span className="text-[rgba(222,235,199,.7)]">Location: </span>
@@ -36,7 +74,7 @@ const VillageHouse = () => {
           </span>
         </Box>
       </div>
-      <div className="w-full grid grid-cols-[auto,1fr] gap-5 ">
+      <div className="w-full grid grid-cols-[auto,1fr] gap-3 ">
         <div className=" flex flex-col justify-center items-center gap-6 p-4">
           <div className="flex gap-4 items-center ">
             <span>Appartments</span>{" "}
@@ -48,600 +86,229 @@ const VillageHouse = () => {
             
             </span> */}
           </div>
-          <div className="grid grid-cols-2 gap-5 ">
-            <div
-              className="w-48 h-48 flex flex-col justify-center items-center relative"
-              style={{
-                borderRadius: "36% 37% 27% 30% / 45% 33% 48% 52%",
-                background: "rgba( 81, 90, 85, 0.8 )",
-                boxShadow: "0 8px 42px 0 rgba( 21, 138, 35, 0.37 )",
-                backdropFilter: "blur( 7.5px )",
-                WebkitBackdropFilter: "blur( 7.5px )",
-              }}
-            >
-              <Box className=" flex justify-center items-center bg-[rgba(22,221,132,.5)] w-12 h-12 rounded-full p-2 text-[10px] font-bold absolute top-5 left-4">
-                App 1
-              </Box>
-              <Box className="pt-2  text-center text-base font-bold">
-                Mr GUENEBE LOUIS
-              </Box>
-            </div>
-            <div
-              className="w-48 h-48 flex flex-col justify-center items-center relative"
-              style={{
-                borderRadius: "36% 37% 27% 30% / 45% 33% 48% 52%",
-                background: "rgba( 81, 90, 85, 0.8 )",
-                boxShadow: "0 8px 42px 0 rgba( 21, 138, 35, 0.37 )",
-                backdropFilter: "blur( 7.5px )",
-                WebkitBackdropFilter: "blur( 7.5px )",
-              }}
-            >
-              <Box className=" flex justify-center items-center bg-[rgba(22,221,132,.5)] w-12 h-12 rounded-full p-2 text-[10px] font-bold absolute top-5 left-4">
-                App 2
-              </Box>
-              <Box className="pt-2  text-center text-base font-bold">
-                Mr HAMADOU
-              </Box>
-            </div>
-
-            <div
-              className="w-48 h-48 flex flex-col justify-center items-center relative"
-              style={{
-                borderRadius: "36% 37% 27% 30% / 45% 33% 48% 52%",
-                background: "rgba( 81, 90, 85, 0.8 )",
-                boxShadow: "0 8px 42px 0 rgba( 21, 138, 35, 0.37 )",
-                backdropFilter: "blur( 7.5px )",
-                WebkitBackdropFilter: "blur( 7.5px )",
-              }}
-            >
-              <Box className=" flex justify-center items-center bg-[rgba(22,221,132,.5)] w-12 h-12 rounded-full p-2 text-[10px] font-bold absolute top-5 left-4">
-                App 3
-              </Box>
-              <Box className="pt-2  text-center text-base font-bold">
-                Mr aksodh
-              </Box>
-            </div>
-
-            <div
-              className="w-48 h-48 flex flex-col justify-center items-center relative"
-              style={{
-                borderRadius: "36% 37% 27% 30% / 45% 33% 48% 52%",
-                background: "rgba( 81, 90, 85, 0.8 )",
-                boxShadow: "0 8px 42px 0 rgba( 21, 138, 35, 0.37 )",
-                backdropFilter: "blur( 7.5px )",
-                WebkitBackdropFilter: "blur( 7.5px )",
-              }}
-            >
-              <Box className=" flex justify-center items-center bg-[rgba(22,221,132,.5)] w-12 h-12 rounded-full p-2 text-[10px] font-bold absolute top-5 left-4">
-                App 4
-              </Box>
-              <Box className="pt-2  text-center text-base font-bold">
-                Mr XYZAS
-              </Box>
-            </div>
+          <div className="grid sm:grid-cols-2 gap-5 ">
+            {tenantsNames &&
+              tenantsNames?.map((items, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="sm:w-48 sm:h-48 mobile:w-32 mobile:h-32 flex flex-col justify-center items-center relative"
+                    style={{
+                      borderRadius: "36% 37% 27% 30% / 45% 33% 48% 52%",
+                      background: "rgba( 81, 90, 85, 0.8 )",
+                      boxShadow: "0 8px 42px 0 rgba( 21, 138, 35, 0.37 )",
+                      backdropFilter: "blur( 7.5px )",
+                      WebkitBackdropFilter: "blur( 7.5px )",
+                    }}
+                  >
+                    <Box className=" flex justify-center items-center bg-[rgba(22,221,132,.5)] sm:w-12 sm:h-12 mobile:w-6  mobile:h-6 rounded-full p-2 sm:text-[10px] mobile:text-[6px] font-bold absolute top-5 left-4">
+                      {items[0]}
+                    </Box>
+                    <Box className="pt-2 mobile:text-[12px] sm:text-base text-center  font-bold">
+                      {items[1]}
+                    </Box>
+                  </div>
+                );
+              })}
           </div>
         </div>
-        <div className="px-2">
-          {/* <div className="bg-white rounded-2xl"> rr</div> */}
-
+        <div className="px-6">
           <Tabs size="md" variant="enclosed">
             <TabList>
-              <Tab _selected={{ color: "white", bg: "green.500" }}>
-                Mr GUENEBE LOUIS
-              </Tab>
-              <Tab _selected={{ color: "white", bg: "green.500" }}>
-                Mr HAMADOU
-              </Tab>
-              <Tab _selected={{ color: "white", bg: "green.500" }}>
-                Mr aksodh
-              </Tab>
-              <Tab _selected={{ color: "white", bg: "green.500" }}>
-                Mr XYZAS
-              </Tab>
+              {tenantsNames &&
+                tenantsNames?.map((items, index) => {
+                  return (
+                    <Tab
+                     fontSize={{sm:"x-small", lg:"large", base:"xx-small" }}                     key={index}
+                      _selected={{ color: "white", bg: "green.500" }}
+                    >
+                      {items[1]}
+                    </Tab>
+                  );
+                })}
+
               <button>
                 <SmallAddIcon />
               </button>
             </TabList>
             <TabPanels>
-              <TabPanel>
-                <Card
-                  direction={{ base: "column", sm: "row" }}
-                  overflow="hidden"
-                  // variant="outline"
-                >
-                  <Image
-                    className=" bg-green-400"
-                    objectFit="cover"
-                    maxW={{ base: "100%", sm: "200px" }}
-                    src={tenantImage}
-                    alt="Caffe Latte"
-                  />
-
-                  <Stack>
-                    <CardBody className="flex flex-col text-xl font-medium gap-4">
-                      <Heading size="md">
-                        Information on tenant in {"Appartment 1"}
-                      </Heading>
-
-                      <Box>
-                        <span>Name:</span>
-                        <span>Mr GUENEBE LOUIS</span>
-                      </Box>
-                      <Box>
-                        <span>Rent:</span>
-                        <span> 20000$</span>
-                      </Box>
-                      <Box>
-                        <span>Start Date:</span>
-                        <span>23-06-2020</span>
-                      </Box>
-                      {/* <Box>
-                        <Editable defaultValue="Add any valuable information">
-                          <EditablePreview />
-                          <EditableTextarea />
-                        </Editable>
-                      </Box> */}
-                    </CardBody>
-
-                    <CardFooter className="flex w-full justify-between">
-                      {/* <Button variant="solid" colorScheme="blue">
-                        Submit
-                      </Button> */}
-                      <Button variant="solid" className="bg-gary-200">
-                        Edit
-                      </Button>
-                    </CardFooter>
-                  </Stack>
-
-                  <Stack>
-                    <CardBody className="flex flex-col gap-3">
-                      <Heading size="md">
-                        Information on Rent in {"Appartment 1"}
-                      </Heading>
+              {/* maping tenant details here */}
+              {
+                tenantDetails&&tenantDetails.map((items,index)=>{
+                  return(
+                    <TabPanel key={index}>
+                    <Card
+                      direction={{ base: "column", sm: "column", lg: "row" }}
+                      // overflow="scroll"
+                      // variant="outline"
+                    >
+                      <Image
+                        className=" w-full bg-green-400"
+                        objectFit="cover"
+                        maxW={{ base: "100%", sm: "100%", lg: "50%" }}
+                        src={items[0]}
+                        alt="tenant Identification"
+                      />
                       <Box
-                        style={{
-                          backgroundColor: "rgb(15,163,130)",
-                          background:
-                            "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,163,130,0.8688725490196079) 46%)",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
+                        direction={{ base: "column", sm: "column", lg: "row" }}
+                        gap={0}
                       >
-                        <span>Rent/month</span>
-                        <span>200,000 XAF</span>
+                        <Stack padding={0} className="flex flex-col gap-1">
+                          <CardBody
+                            className="flex flex-col text-xs font-medium gap-3 "
+                            paddingLeft="4"
+                            paddingBottom="1"
+                          >
+                            <Heading size="md">
+                              Information on tenant in {`Appartement ${items[1][0][0]}`}
+                            </Heading>
+    
+                            <Box
+                              style={{
+                                backgroundColor: "rgb(15,163,130)",
+                                background:
+                                  "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,63,130,0.8688725490196079) 46%)",
+                              }}
+                              className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
+                            >
+                              <span>Name:</span>
+                              <span>{items[1][0][1]}</span>
+                            </Box>
+                            <Box
+                              style={{
+                                backgroundColor: "rgb(15,163,130)",
+                                background:
+                                  "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,63,130,0.8688725490196079) 46%)",
+                              }}
+                              className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
+                            >
+                              <span>Rent:</span>
+                              <span> {items[1][0][2]}</span>
+                            </Box>
+                            <Box
+                              style={{
+                                backgroundColor: "rgb(15,163,130)",
+                                background:
+                                  "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,63,130,0.8688725490196079) 46%)",
+                              }}
+                              className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
+                            >
+                              {" "}
+                              <span>Start Date:</span>
+                              <span>{items[1][0][3]}</span>
+                            </Box>
+                            {/* <Box>
+                            <Editable defaultValue="Add any valuable information">
+                              <EditablePreview />
+                              <EditableTextarea />
+                            </Editable>
+                          </Box> */}
+                          </CardBody>
+    
+                          <CardFooter
+                            paddingLeft={6}
+                            paddingTop={0}
+                            paddingBottom={2}
+                          >
+                            {/* <Button variant="solid" colorScheme="blue">
+                            Submit
+                          </Button> */}
+                            <Button
+                              variant="solid"
+                              padding={4}
+                              className="bg-gary-200"
+                            >
+                              Edit
+                            </Button>
+                          </CardFooter>
+                        </Stack>
+    
+                        <Stack padding={0} className="flex flex-col gap-1">
+                          <CardBody
+                            className="flex flex-col text-xs font-medium gap-3 "
+                            paddingLeft="4"
+                            paddingBottom="1"
+                          >
+                            <Heading size="md">
+                              Information on Rent in {`Appartment  ${items[1][1][0]}`}
+                            </Heading>
+                            <Box
+                              style={{
+                                backgroundColor: "rgb(15,163,130)",
+                                background:
+                                  "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,163,130,0.8688725490196079) 46%)",
+                              }}
+                              className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
+                            >
+                              <span>Rent/month</span>
+                              <span>{items[1][1][1]}</span>
+                            </Box>
+    
+                            <Box
+                              style={{
+                                backgroundColor: "rgb(15,163,130)",
+                                background:
+                                  "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,163,130,0.8688725490196079) 46%)",
+                              }}
+                              className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
+                            >
+                              <span>Rent/month</span>
+                              <div>
+                              {items[1][1][2]}
+                              </div>
+                            </Box>
+    
+                            <Box
+                              style={{
+                                backgroundColor: "rgb(7,10,9)",
+                                background:
+                                  " linear-gradient(90deg, rgba(7,10,9,0.780098039215687) 30%, rgba(163,15,50,0.8688725490196079) 46%)",
+                              }}
+                              className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
+                            >
+                              <span>Total rent Not payed</span>
+                              <span>{items[1][1][3]}</span>
+                            </Box>
+                            <Box
+                              style={{
+                                backgroundColor: "rgb(7,10,9)",
+                                background:
+                                  " linear-gradient(90deg, rgba(7,10,9,0.780098039215687) 30%, rgba(163,15,50,0.8688725490196079) 46%",
+                              }}
+                              className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
+                            >
+                              <span>Rent Status</span>
+                              <span>{items[1][1][4]}</span>
+                            </Box>
+    
+                            {/* <Box>
+                            <Editable defaultValue="Add any valuable information">
+                              <EditablePreview />
+                              <EditableTextarea />
+                            </Editable>
+                          </Box> */}
+                          </CardBody>
+    
+                          <CardFooter paddingLeft={6} paddingTop={0}>
+                            {/* <Button variant="solid" colorScheme="blue">
+                            Submit
+                          </Button> */}
+                            <Button
+                              variant="solid"
+                              padding={4}
+                              className="bg-gary-200"
+                            >
+                              Edit
+                            </Button>
+                          </CardFooter>
+                        </Stack>
                       </Box>
-
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(15,163,130)",
-                          background:
-                            "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,163,130,0.8688725490196079) 46%)",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Rent/month</span>
-                        <div>
-                          <span> 1year</span> <span>5months</span>{" "}
-                          <span> 16days</span>
-                        </div>
-                      </Box>
-
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(7,10,9)",
-                          background:
-                            " linear-gradient(90deg, rgba(7,10,9,0.780098039215687) 30%, rgba(163,15,50,0.8688725490196079) 46%)",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Total rent Not payed</span>
-                        <span>600,000 XAF</span>
-                      </Box>
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(7,10,9)",
-                          background:
-                            " linear-gradient(90deg, rgba(7,10,9,0.780098039215687) 30%, rgba(163,15,50,0.8688725490196079) 46%",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Rent Status</span>
-                        <span>3 months unpaid</span>
-                      </Box>
-
-                      {/* <Box>
-                        <Editable defaultValue="Add any valuable information">
-                          <EditablePreview />
-                          <EditableTextarea />
-                        </Editable>
-                      </Box> */}
-                    </CardBody>
-
-                    <CardFooter className="flex w-full justify-between">
-                      {/* <Button variant="solid" colorScheme="blue">
-                        Submit
-                      </Button> */}
-                      <Button variant="solid" className="bg-gary-200">
-                        Edit
-                      </Button>
-                    </CardFooter>
-                  </Stack>
-                </Card>
-              </TabPanel>
-
-              <TabPanel>
-                <Card
-                  direction={{ base: "column", sm: "row" }}
-                  overflow="hidden"
-                  // variant="outline"
-                >
-                  <Image
-                    className=" bg-green-400"
-                    objectFit="cover"
-                    maxW={{ base: "100%", sm: "200px" }}
-                    src={tenantImage2}
-                    alt="Caffe Latte"
-                  />
-
-                  <Stack>
-                    <CardBody className="flex flex-col text-xl font-medium gap-4">
-                      <Heading size="md">
-                        Information on tenant in {"Appartment 1"}
-                      </Heading>
-
-                      <Box>
-                        <span>Name:</span>
-                        <span>Mr HAMADOU</span>
-                      </Box>
-                      <Box>
-                        <span>Rent:</span>
-                        <span> 20000$</span>
-                      </Box>
-                      <Box>
-                        <span>Start Date:</span>
-                        <span>23-06-2022</span>
-                      </Box>
-                      {/* <Box>
-                        <Editable defaultValue="Add any valuable information">
-                          <EditablePreview />
-                          <EditableTextarea />
-                        </Editable>
-                      </Box> */}
-                    </CardBody>
-
-                    <CardFooter className="flex w-full justify-between">
-                      {/* <Button variant="solid" colorScheme="blue">
-                        Submit
-                      </Button> */}
-                      <Button variant="solid" className="bg-gary-200">
-                        Edit
-                      </Button>
-                    </CardFooter>
-                  </Stack>
-
-                  <Stack>
-                    <CardBody className="flex flex-col gap-3">
-                      <Heading size="md">
-                        Information on Rent in {"Appartment 1"}
-                      </Heading>
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(15,163,130)",
-                          background:
-                            "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,163,130,0.8688725490196079) 46%)",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Rent/month</span>
-                        <span>200,000 XAF</span>
-                      </Box>
-
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(15,163,130)",
-                          background:
-                            "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,163,130,0.8688725490196079) 46%)",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Rent/month</span>
-                        <div>
-                          <span> 1year</span> <span>2months</span>{" "}
-                          <span> 19days</span>
-                        </div>
-                      </Box>
-
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(7,10,9)",
-                          background:
-                            " linear-gradient(90deg, rgba(7,10,9,0.780098039215687) 30%, rgba(163,15,50,0.8688725490196079) 46%)",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Total rent Not payed</span>
-                        <span>200,000 XAF</span>
-                      </Box>
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(7,10,9)",
-                          background:
-                            " linear-gradient(90deg, rgba(7,10,9,0.780098039215687) 30%, rgba(163,15,50,0.8688725490196079) 46%",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Rent Status</span>
-                        <span>1 month unpaid</span>
-                      </Box>
-
-                      {/* <Box>
-                        <Editable defaultValue="Add any valuable information">
-                          <EditablePreview />
-                          <EditableTextarea />
-                        </Editable>
-                      </Box> */}
-                    </CardBody>
-
-                    <CardFooter className="flex w-full justify-between">
-                      {/* <Button variant="solid" colorScheme="blue">
-                        Submit
-                      </Button> */}
-                      <Button variant="solid" className="bg-gary-200">
-                        Edit
-                      </Button>
-                    </CardFooter>
-                  </Stack>
-                </Card>
-              </TabPanel>
-
-              <TabPanel>
-                <Card
-                  direction={{ base: "column", sm: "row" }}
-                  overflow="hidden"
-                  // variant="outline"
-                >
-                  <Image
-                    className=" bg-green-400"
-                    objectFit="cover"
-                    maxW={{ base: "100%", sm: "200px" }}
-                    src={tenantImage3}
-                    alt="Caffe Latte"
-                  />
-
-                  <Stack>
-                    <CardBody className="flex flex-col text-xl font-medium gap-4">
-                      <Heading size="md">
-                        Information on tenant in {"Appartment 1"}
-                      </Heading>
-
-                      <Box>
-                        <span>Name:</span>
-                        <span>Mr aksodh</span>
-                      </Box>
-                      <Box>
-                        <span>Rent:</span>
-                        <span> 20000$</span>
-                      </Box>
-                      <Box>
-                        <span>Start Date:</span>
-                        <span>13-12-2018</span>
-                      </Box>
-                      {/* <Box>
-                        <Editable defaultValue="Add any valuable information">
-                          <EditablePreview />
-                          <EditableTextarea />
-                        </Editable>
-                      </Box> */}
-                    </CardBody>
-
-                    <CardFooter className="flex w-full justify-between">
-                      {/* <Button variant="solid" colorScheme="blue">
-                        Submit
-                      </Button> */}
-                      <Button variant="solid" className="bg-gary-200">
-                        Edit
-                      </Button>
-                    </CardFooter>
-                  </Stack>
-
-                  <Stack>
-                    <CardBody className="flex flex-col gap-3">
-                      <Heading size="md">
-                        Information on Rent in {"Appartment 1"}
-                      </Heading>
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(15,163,130)",
-                          background:
-                            "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,163,130,0.8688725490196079) 46%)",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Rent/month</span>
-                        <span>180,000 XAF</span>
-                      </Box>
-
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(15,163,130)",
-                          background:
-                            "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,163,130,0.8688725490196079) 46%)",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Rent/month</span>
-                        <div>
-                          <span> 3year</span> <span>2months</span>{" "}
-                          <span> 29days</span>
-                        </div>
-                      </Box>
-
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(7,10,9)",
-                          background:
-                            " linear-gradient(90deg, rgba(7,10,9,0.780098039215687) 30%, rgba(163,15,50,0.8688725490196079) 46%)",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Total rent Not payed</span>
-                        <span>2,160,000 XAF</span>
-                      </Box>
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(7,10,9)",
-                          background:
-                            " linear-gradient(90deg, rgba(7,10,9,0.780098039215687) 30%, rgba(163,15,50,0.8688725490196079) 46%",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Rent Status</span>
-                        <span>12 months unpaid</span>
-                      </Box>
-
-                      {/* <Box>
-                        <Editable defaultValue="Add any valuable information">
-                          <EditablePreview />
-                          <EditableTextarea />
-                        </Editable>
-                      </Box> */}
-                    </CardBody>
-
-                    <CardFooter className="flex w-full justify-between">
-                      {/* <Button variant="solid" colorScheme="blue">
-                        Submit
-                      </Button> */}
-                      <Button variant="solid" className="bg-gary-200">
-                        Edit
-                      </Button>
-                    </CardFooter>
-                  </Stack>
-                </Card>
-              </TabPanel>
-
-              <TabPanel>
-                <Card
-                  direction={{ base: "column", sm: "row" }}
-                  overflow="hidden"
-                  // variant="outline"
-                >
-                  <Image
-                    className=" bg-green-400"
-                    objectFit="cover"
-                    maxW={{ base: "100%", sm: "200px" }}
-                    src={tenantImage4}
-                    alt="Caffe Latte"
-                  />
-
-                  <Stack>
-                    <CardBody className="flex flex-col text-xl font-medium gap-4">
-                      <Heading size="md">
-                        Information on tenant in {"Appartment 1"}
-                      </Heading>
-
-                      <Box>
-                        <span>Name:</span>
-                        <span>MrMr XYZAS</span>
-                      </Box>
-                      <Box>
-                        <span>Rent:</span>
-                        <span> 20000$</span>
-                      </Box>
-                      <Box>
-                        <span>Start Date:</span>
-                        <span>20-08-2023</span>
-                      </Box>
-                      {/* <Box>
-                        <Editable defaultValue="Add any valuable information">
-                          <EditablePreview />
-                          <EditableTextarea />
-                        </Editable>
-                      </Box> */}
-                    </CardBody>
-
-                    <CardFooter className="flex w-full justify-between">
-                      {/* <Button variant="solid" colorScheme="blue">
-                        Submit
-                      </Button> */}
-                      <Button variant="solid" className="bg-gary-200">
-                        Edit
-                      </Button>
-                    </CardFooter>
-                  </Stack>
-
-                  <Stack>
-                    <CardBody className="flex flex-col gap-3">
-                      <Heading size="md">
-                        Information on Rent in {"Appartment 1"}
-                      </Heading>
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(15,163,130)",
-                          background:
-                            "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,163,130,0.8688725490196079) 46%)",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Rent/month</span>
-                        <span>200,000 XAF</span>
-                      </Box>
-
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(15,163,130)",
-                          background:
-                            "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,163,130,0.8688725490196079) 46%)",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Rent/month</span>
-                        <div>
-                          <span> 2year</span> <span>1month</span>{" "}
-                          <span> 16days</span>
-                        </div>
-                      </Box>
-
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(15,163,130)",
-                          background:
-                            "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,163,130,0.8688725490196079) 46%)",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Total rent Not payed</span>
-                        <span>0 XAF</span>
-                      </Box>
-                      <Box
-                        style={{
-                          backgroundColor: "rgb(15,163,130)",
-                          background:
-                            "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,163,130,0.8688725490196079) 46%)",
-                        }}
-                        className="flex justify-between text-white italic p-1 px-3 rounded-2xl font-bold"
-                      >
-                        <span>Rent Status</span>
-                        <span>0 months unpaid</span>
-                      </Box>
-
-                      {/* <Box>
-                        <Editable defaultValue="Add any valuable information">
-                          <EditablePreview />
-                          <EditableTextarea />
-                        </Editable>
-                      </Box> */}
-                    </CardBody>
-
-                    <CardFooter className="flex w-full justify-between">
-                      {/* <Button variant="solid" colorScheme="blue">
-                        Submit
-                      </Button> */}
-                      <Button variant="solid" className="bg-gary-200">
-                        Edit
-                      </Button>
-                    </CardFooter>
-                  </Stack>
-                </Card>
-              </TabPanel>
+                    </Card>
+                  </TabPanel>
+                  )
+                })
+              }
+           {/* end mapping tenant details here */}
             </TabPanels>
           </Tabs>
         </div>
