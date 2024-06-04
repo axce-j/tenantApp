@@ -1,8 +1,7 @@
 import { AddIcon, SmallAddIcon } from "@chakra-ui/icons";
-import tenantImage from "../assets/tenantImage.png";
-import tenantImage2 from "../assets/tenantImage2.png";
-import tenantImage3 from "../assets/tenantImage3.png";
-import tenantImage4 from "../assets/tenantImage4.png";
+ 
+import { tenantDetailsVillage,tenantsNamesVillage } from "../components/functions";
+// import AllFunctions from "../components/functions";
 import {
   Box,
   Button,
@@ -20,45 +19,48 @@ import {
 } from "@chakra-ui/react";
 
 const VillageHouse = () => {
+  const tenantsNames=tenantsNamesVillage
+  const tenantDetails=tenantDetailsVillage
+   
   // to be deleted later
 
-  const tenantsNames = [
-    ["App1", "Mr Guenebe Louis"],
-    ["App2", "Mr Hamadou"],
-    ["App3", "Mr aksodh"],
-    ["App4", "MrXYZAS"],
-  ];
+  // const tenantsNames = [
+  //   ["App1", "Mr Guenebe Louis"],
+  //   ["App2", "Mr Hamadou"],
+  //   ["App3", "Mr aksodh"],
+  //   ["App4", "MrXYZAS"],
+  // ];
 
-  const tenantDetails = [
-    [
-      [tenantImage],
-      [
-        ["1", "Mr Guenebe Louis", "200000xaf", "23-06-2020"],
-        ["1", "200,000XAF", "1Y  5M  16D", "600,000XAF", "3 months unpaid"],
-      ],
-    ],
-    [
-      [tenantImage2],
-      [
-        ["2", "Mr Hamadou", "200000xaf", "23-06-2022"],
-        ["2", "200,000XAF", "1Y  2M  19D", "200,000XAF", "1 month unpaid"],
-      ],
-    ],
-    [
-      [tenantImage3],
-      [
-        ["3", "Mr aksodh", "200000xaf", "13-12-2018"],
-        ["3", "180,000XAF", "3Y  2M  29D", "2,160,000XAF", "12 months unpaid"],
-      ],
-    ],
-    [
-      [tenantImage4],
-      [
-        ["4", "Mr Xyzas", "200000xaf", "20-08-2022"],
-        ["1", "200,000XAF", "2Y  1M  16D", "0XAF", "0 months unpaid"],
-      ],
-    ],
-  ];
+  // const tenantDetails = [
+  //   [
+  //     [tenantImage],
+  //     [
+  //       ["1", "Mr Guenebe Louis", "200000xaf", "23-06-2020"],
+  //       ["1", "200,000XAF", "1Y  5M  16D", "600,000XAF", "3 months unpaid"],
+  //     ],
+  //   ],
+  //   [
+  //     [tenantImage2],
+  //     [
+  //       ["2", "Mr Hamadou", "200000xaf", "23-06-2022"],
+  //       ["2", "200,000XAF", "1Y  2M  19D", "200,000XAF", "1 month unpaid"],
+  //     ],
+  //   ],
+  //   [
+  //     [tenantImage3],
+  //     [
+  //       ["3", "Mr aksodh", "200000xaf", "13-12-2018"],
+  //       ["3", "180,000XAF", "3Y  2M  29D", "2,160,000XAF", "12 months unpaid"],
+  //     ],
+  //   ],
+  //   [
+  //     [tenantImage4],
+  //     [
+  //       ["4", "Mr Xyzas", "200000xaf", "20-08-2022"],
+  //       ["1", "200,000XAF", "2Y  1M  16D", "0XAF", "0 months unpaid"],
+  //     ],
+  //   ],
+  // ];
 
   return (
     <div className="text-white w-full flex flex-col gap-8  ">
@@ -75,7 +77,9 @@ const VillageHouse = () => {
         </Box>
       </div>
       <div className="w-full grid mobile:grid-cols-[auto] lg:grid-cols-[25%,1fr] mobile:gap-8 lg:gap-0 ">
-        <div className=" flex flex-col sm:justify-center  mobile:justify-center mobile:items-start lgMobile:justify-center lgMobile:items-center sm:items-center gap-6 p-1 mobile:overflow-x-scroll sm:overflow-hidden  ">
+        <div className=" flex flex-col  mobile:justify-center mobile:items-start
+         lgMobile:justify-center lgMobile:items-center 
+         sm:justify-center sm:items-center  gap-6 p-1 ">
           <div className="flex gap-4 mobile:pl-4  items-center  ">
             <span>Appartments</span>{" "}
             <AddIcon
@@ -83,7 +87,7 @@ const VillageHouse = () => {
               boxSize={6}
             />
           </div>
-          <div className=" flex mobile:gap-5 lg:flex-col sm:gap-4  ">
+          <div className=" flex mobile:gap-5 lg:flex-col sm:gap-4  mobile:overflow-x-scroll sm:overflow-hidden   ">
             {tenantsNames &&
               tenantsNames?.map((items, index) => {
                 return (
