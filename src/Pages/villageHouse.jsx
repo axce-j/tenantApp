@@ -26,7 +26,7 @@ const VillageHouse = () => {
     ["App1", "Mr Guenebe Louis"],
     ["App2", "Mr Hamadou"],
     ["App3", "Mr aksodh"],
-    ["App4", "MrXYZAS"],
+    // ["App4", "MrXYZAS"],
   ];
 
   const tenantDetails = [
