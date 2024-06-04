@@ -7,7 +7,13 @@ import GarRouteHouse from "./Pages/garRouteHouse.jsx"
 import VillageHouse from "./Pages/villageHouse.jsx"
 function App() {
   return (
-    <div className=" bg-[rgba(4,12,28,1)] border-transparent  min-w-[240px]  h-screen w-screen">
+    // <div className=" bg-[rgba(4,12,28,1)] border-transparent 
+    //  min-w-[240px]  h-screen w-screen
+    //  ">
+   
+    <div className=" bg-[rgba(4,12,28,1)] border-transparent 
+     min-w-[240px]  
+     ">
 
 <Routes>
       <Route path="/"  element={<Welcome/>} />
