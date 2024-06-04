@@ -26,7 +26,7 @@ const VillageHouse = () => {
     ["App1", "Mr Guenebe Louis"],
     ["App2", "Mr Hamadou"],
     ["App3", "Mr aksodh"],
-    // ["App4", "MrXYZAS"],
+    ["App4", "MrXYZAS"],
   ];
 
   const tenantDetails = [
@@ -75,15 +75,15 @@ const VillageHouse = () => {
         </Box>
       </div>
       <div className="w-full grid mobile:grid-cols-[auto] lg:grid-cols-[25%,1fr] mobile:gap-8 lg:gap-0 ">
-        <div className=" flex flex-col sm:justify-center  mobile:justify-center mobile:items-start lgMobile:justify-center lgMobile:items-center sm:items-center gap-6 p-1   ">
-          <div className="flex gap-4 mobile:pl-4  items-center ">
+        <div className=" flex flex-col sm:justify-center  mobile:justify-center mobile:items-start lgMobile:justify-center lgMobile:items-center sm:items-center gap-6 p-1 mobile:overflow-x-scroll sm:overflow-hidden  ">
+          <div className="flex gap-4 mobile:pl-4  items-center  ">
             <span>Appartments</span>{" "}
             <AddIcon
               className="bg-[rgba(22,221,132,.5)] p-2 font-bold rounded-full"
               boxSize={6}
             />
           </div>
-          <div className=" flex mobile:gap-5 lg:flex-col sm:gap-4 mobile:overflow-x-scroll sm:overflow-hidden ">
+          <div className=" flex mobile:gap-5 lg:flex-col sm:gap-4  ">
             {tenantsNames &&
               tenantsNames?.map((items, index) => {
                 return (
