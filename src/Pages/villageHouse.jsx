@@ -97,7 +97,7 @@ const VillageHouse = () => {
                     style={{
                       borderRadius: "36% 37% 27% 30% / 45% 33% 48% 52%",
                       background: "rgba( 81, 90, 85, 0.8 )",
-                      boxShadow: "0 5px 17px 0 rgba( 21, 138, 35, 0.37 )",
+                      // boxShadow: "0 5px 17px 0 rgba( 21, 138, 35, 0.37 )",
                       backdropFilter: "blur( 7.5px )",
                       WebkitBackdropFilter: "blur( 7.5px )",
                     }}
