@@ -74,7 +74,7 @@ const VillageHouse = () => {
           </span>
         </Box>
       </div>
-      <div className="w-full grid grid-cols-[auto,1fr] gap-3 ">
+      <div className="w-full grid mobile:grid-cols-[auto] sm:grid-cols-[auto,1fr] gap-3 ">
         <div className=" flex flex-col justify-center items-center gap-6 p-4">
           <div className="flex gap-4 items-center ">
             <span>Appartments</span>{" "}
@@ -86,7 +86,7 @@ const VillageHouse = () => {
             
             </span> */}
           </div>
-          <div className="grid sm:grid-cols-2 gap-5 ">
+          <div className="mobile:flex mobile: gap-2  sm:grid sm:grid-cols-4 sm:gap-5 ">
             {tenantsNames &&
               tenantsNames?.map((items, index) => {
                 return (
