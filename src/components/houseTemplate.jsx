@@ -24,8 +24,10 @@ const HouseTemplate = (props) => {
 
   return (
 
-     <Box className="flex flex-col gap-8 justify-center px-6 ">
-      <div className=" pt-4 flex flex-col gap-4 justify-center items-center w-full">
+     <Box className="flex flex-col gap-8 justify-center px-6  sm:pb-32">
+
+
+      <Box className=" pt-4 flex flex-col gap-4 justify-center items-center w-full">
          <Box className="mobile:text-2xl bread-words sm:text-5xl text-green-400 font-bold">
            Village House
          </Box>
@@ -36,7 +38,71 @@ const HouseTemplate = (props) => {
              New-town Aeroport Douala Elf
            </span>
          </Box>
-       </div>
+       </Box>
+
+
+<Box className="flex mobile:flex-col sm:flex-col-reverse gap-8">
+
+<Box className=" flex justify-center">
+  <Box className="text-white flex flex-col gap-4 w-[70%]">
+<Box className="flex gap-4 mobile:pl-4  items-center  ">
+            <span>Appartments</span>{" "}
+            <AddIcon
+              className="bg-[rgba(22,221,132,.5)] p-2 font-bold rounded-full"
+              boxSize={6}
+            />
+          </Box>
+           
+         <Box
+          className=" flex flex-col  mobile:justify-center mobile:items-start
+         lgMobile:justify-start lgMobile:items-start 
+         sm:justify-start sm:items-start  gap-6 p-1  overflow-x-scroll   "
+         sx={{
+          "&::-webkit-scrollbar": {
+            height: "6px", // Change the height of the scrollbar
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: " rgba(81, 90, 85, 0.4)", // Change the color of the scrollbar thumb
+            borderRadius: "4px", // Change the border radius of the scrollbar thumb
+          },
+          "&::-webkit-scrollbar-track": {
+            backgroundColor: "transparent", // Change the color of the scrollbar track
+          },
+        }}
+        >
+           
+          <Box className=" flex mobile:gap-5   sm:gap-4     ">
+            {tenantsNames &&
+              tenantsNames?.map((items, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="  mobile:w-24 mobile:h-24 sm:w-32 sm:h-32 flex flex-col justify-center items-center relative"
+                    style={{
+                      borderRadius: "36% 37% 27% 30% / 45% 33% 48% 52%",
+                      background: "rgba( 81, 90, 85, 0.8 )",
+                      // boxShadow: "0 5px 17px 0 rgba( 21, 138, 35, 0.37 )",
+                      backdropFilter: "blur( 7.5px )",
+                      WebkitBackdropFilter: "blur( 7.5px )",
+                    }}
+                  >
+                    <Box className=" flex justify-center items-center bg-[rgba(22,221,132,.5)] sm:w-10 sm:h-10 mobile:w-6  mobile:h-6 rounded-full p-2 lg:text-[10px] mobile:text-[6px] sm:text-xs font-bold absolute    mobile:top-2 mobile:left-4  ">
+                      {items[0]}
+                    </Box>
+                    <Box className="pt-2 mobile:text-[8px] sm:text-[12px]  mt-4 lg:text-base text-center  font-bold">
+                      {items[1]}
+                    </Box>
+                  </div>
+                );
+              })}
+          </Box>
+        </Box>
+
+  </Box>
+
+
+</Box>
+
 
 
 
@@ -214,6 +280,13 @@ const HouseTemplate = (props) => {
     })}
    </TabPanels>
 </Tabs>
+
+</Box>
+
+
+
+
+
      </Box>
 
 
