@@ -37,7 +37,7 @@ const HouseTemplate = (props) => {
         </Box>
       </div>
       <div className="w-full grid mobile:grid-cols-[auto] lg:grid-cols-[25%,1fr] mobile:gap-8 lg:gap-0 mobile:max-w-screen-sm ">
-        <div
+        {/* <div
           className=" flex flex-col  mobile:justify-center mobile:items-start
          lgMobile:justify-center lgMobile:items-center 
          sm:justify-center sm:items-center  gap-6 p-1 "
@@ -74,15 +74,15 @@ const HouseTemplate = (props) => {
                 );
               })}
           </div>
-        </div>
-
-        <div className="px-6 flex justify-center">
+        </div> */}
+<div>e</div>
+        <div className=" w-full px-6 flex justify-center">
           <Tabs
             size="md"
             variant="enclosed"
-            className="lmobile:w-[80vw] xl:w-[70vw] g:w-[65vw]"
-                      >
-            <TabList width="90%"  marginLeft="22px" justifyContent="start"  >
+            className="lmobile:w-[80vw] xl:w-[60vw] lg:w-[65vw]"
+          >
+            <TabList width="90%" marginLeft="22px" justifyContent="start">
               <Box
                 width="100%"
                 display="flex"
@@ -91,27 +91,27 @@ const HouseTemplate = (props) => {
                 overflowY="hidden"
                 paddingX="30px"
                 marginBottom="5px"
-                borderLeft="2px solid rgba(255,213,203,.2)" 
-                borderRight="2px solid rgba(255,213,203,.2)" 
+                borderLeft="2px solid rgba(255,213,203,.2)"
+                borderRight="2px solid rgba(255,213,203,.2)"
                 borderRadius="10px"
                 sx={{
-                    "&::-webkit-scrollbar": {
-                      height: "6px", // Change the height of the scrollbar
-                    },
-                    "&::-webkit-scrollbar-thumb": {
-                      backgroundColor: " transparent", // Change the color of the scrollbar thumb
-                      borderRadius: "4px", // Change the border radius of the scrollbar thumb
-                    },
-                    "&::-webkit-scrollbar-track": {
-                      backgroundColor: "transparent", // Change the color of the scrollbar track
-                    },
-                  }}
+                  "&::-webkit-scrollbar": {
+                    height: "6px", // Change the height of the scrollbar
+                  },
+                  "&::-webkit-scrollbar-thumb": {
+                    backgroundColor: " transparent", // Change the color of the scrollbar thumb
+                    borderRadius: "4px", // Change the border radius of the scrollbar thumb
+                  },
+                  "&::-webkit-scrollbar-track": {
+                    backgroundColor: "transparent", // Change the color of the scrollbar track
+                  },
+                }}
               >
                 {tenantsNames &&
                   tenantsNames?.map((items, index) => {
                     return (
                       <Tab
-                        className="w-full min-w-[240px]"
+                        className="w-full min-w-[220px] "
                         fontSize={{
                           sm: "x-small",
                           lg: "large",
