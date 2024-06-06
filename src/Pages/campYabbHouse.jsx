@@ -1,15 +1,17 @@
   
-import { tenantDetailsCampYabb,  tenantsNamesCampYabb } from "../components/functions";
  
+import AllFunctions from "../components/functions";
 import HouseTemplate from "../components/houseTemplate";
 
 const CampYabbHouse = () => {
-  const tenantsNames=tenantsNamesCampYabb
-  const tenantDetails=tenantDetailsCampYabb
+  // const tenantsNames=tenantsNamesCampYabb
+  // const tenantDetails=tenantDetailsCampYabb
+  const {tenantsNamesCampYabb,tenantDetailsCampYabb} = AllFunctions();
+  
     
   return(
 
-    <HouseTemplate tenantDetails={tenantDetails} tenantsNames={tenantsNames}/>
+    <HouseTemplate tenantDetails={tenantDetailsCampYabb} tenantsNames={tenantsNamesCampYabb}/>
       )
     
 };

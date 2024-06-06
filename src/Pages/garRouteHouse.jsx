@@ -1,13 +1,12 @@
-import { tenantDetailsGareRoute,  tenantsNamesGareRoute } from "../components/functions";
+import AllFunctions from "../components/functions";
 import HouseTemplate from "../components/houseTemplate";
 
 const GarRouteHouse = () => {
-  const tenantsNames = tenantsNamesGareRoute;
-  const tenantDetails = tenantDetailsGareRoute;
- 
+  const {tenantDetailsGareRoute,tenantsNamesGareRoute} = AllFunctions();
+  
   return(
 
-    <HouseTemplate tenantDetails={tenantDetails} tenantsNames={tenantsNames}/>
+    <HouseTemplate tenantDetails={tenantDetailsGareRoute} tenantsNames={tenantsNamesGareRoute}/>
       )
     
   

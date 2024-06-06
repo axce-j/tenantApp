@@ -5,6 +5,8 @@ import CampYabbHouse from "./Pages/campYabbHouse.jsx"
 import ChantierHouse from "./Pages/chantierHouse.jsx"
 import GarRouteHouse from "./Pages/garRouteHouse.jsx"
 import VillageHouse from "./Pages/villageHouse.jsx"
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 function App() {
   return (
     // <div className=" bg-[rgba(4,12,28,1)] border-transparent 
