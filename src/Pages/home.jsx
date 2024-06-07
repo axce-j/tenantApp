@@ -3,7 +3,7 @@ import downButton from "../assets/chevron-double-down.png";
 import AllFunctions from "../components/functions";
 
 const Home = () => {
-  const { handleNaviagtiontoHouse, houseNames,handleNaviagtiontoHomePage } = AllFunctions();
+  const { handleNaviagtiontoHouse, houseNames } = AllFunctions();
   return (
     <div className="  w-full h-[100vh]">
       <Box className="flex justify-between items-center mobile:pt-3 sm:pt-2 ">
