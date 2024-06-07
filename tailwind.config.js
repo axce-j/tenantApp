@@ -53,7 +53,11 @@ export default {
         
         
       
-    }
+    },
+    backgroundImage: {
+      'custom-brown-gradient': "linear-gradient(90deg, rgba(97,72,66,0.81919793307948) 13%, rgba(97,72,66,0.51919793307948) 24%, rgba(97,72,66,0.81919793307948) 63%)",
+    },
+
    
   },
     },

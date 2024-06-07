@@ -251,8 +251,11 @@ const tenantsNamesVillage = [
   const handleNaviagtiontoHomePage = () => {
     navigate("/home") }
     const handleNaviagtiontoHouse = (name) => {
-      const houseName= `/${name}`
-      navigate(houseName) }
+      const houseNaming= `/${name}`
+      navigate(houseNaming) }
+
+      // const handleNaviagtiontoHomePage = () => {
+      //   navigate("/home") }
       const houseNames=[
       [[0],["CampYabb House","CampYabassi ancient Depot de planche","campYabbassi"]],
        [[1],[ "GareRoute House","CampYabassi ancient depot de planche","gareRoutier"]],

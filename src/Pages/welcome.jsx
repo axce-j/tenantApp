@@ -1,34 +1,38 @@
-import nextButton from "../assets/nextButton.png";
-import AllFunctions from "../components/functions";
+import { Box } from "@chakra-ui/react";
+//  import AllFunctions from "../components/functions";
+ import LoginModal from "../components/loginModal";
+import { ReactSVG } from "react-svg";
+import DoorLogo from "../assets/doorLogo.svg"
+import SignUpModal from "../components/signUpModal";
 const Welcome = () => {
-  const {handleNaviagtiontoHomePage}= AllFunctions()
+  // const { handleNaviagtiontoHomePage } = AllFunctions();
   return (
     <div className="w-full h-[100vh] ">
-      <div className="flex flex-col w-full h-full justify-center items-center gap-8">
+      <div className="flex flex-col w-full h-full justify-center items-center gap-8 relative">
+        <Box>
 
-
+      <Box className="absolute top-4 right-6">
+        <SignUpModal/>
+       </Box>
         <div className="flex items-center gap-3">
           <div className="text-white font-bold mobile:text-xl sm:text-5xl text-center">
             Welcome
           </div>
-          <img  className="mobile:w-12 mobile:h-12 sm:w-24 sm:h-24 cursor-pointer" onClick={()=>handleNaviagtiontoHomePage()}  src={nextButton} alt="photo" />
+           
+           <ReactSVG
+         src={DoorLogo}
+         beforeInjection={(svg) => {
+           svg.setAttribute('style', 'width: 70px; height: 70px;');
+           svg.querySelector('path').setAttribute('style',  'stroke-width: 0; fill: rgba(97, 72, 66, 1); stroke:rgba(97, 72, 66, 1)');
+         }}
+      />
+         
         </div>
+<Box>
 
-        <div
-          className="bg-white mobile:w-48 mobile:h-48  sm:w-72 sm:h-72 flex items-center justify-center  text-[rgba(193,242,217)] font-bold mobile:text-sm sm:text-xl animate-bounce-effect cursor-pointer"
-          style={{
-            borderRadius: "20% 65% 34% 66% / 59% 64% 36% 41%",
-            backgroundColor: " rgb(27,232,186)",
-            background:
-              " linear-gradient(90deg, rgba(27,232,186,0.51919793307948) 13%, rgba(40,47,47,0.3232143882943803) 24%, rgba(43,127,218,0.4865197104232318) 63%)",
-            // boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
-            backdropFilter: "blur( 9.5px )",
-            WebkitBackdropFilter: "blur( 9.5px )",
-          }}
-          onClick={()=>handleNaviagtiontoHomePage()}
-        >
-          MR Chinedu TenantApp
-        </div>
+        <LoginModal/>
+</Box>
+        </Box>
       </div>
     </div>
   );
