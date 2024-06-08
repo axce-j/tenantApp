@@ -3,6 +3,7 @@ import tenantImage from "../assets/tenantImage.png";
 import tenantImage2 from "../assets/tenantImage2.png";
 import tenantImage3 from "../assets/tenantImage3.png";
 import tenantImage4 from "../assets/tenantImage4.png";
+import { useState } from "react";
 
 
 
@@ -277,7 +278,25 @@ const tenantsNamesVillage = [
   ],
   
 ];
+ const [seeUser ,setSeeUser]=useState({
+  campYabb:tenantDetailsCampYabb[0],
+  GareRoute:tenantDetailsGareRoute[0],
+  Village:tenantDetailsVillage[0],
+  Chantier:tenantDetailsChantier[0],
+ })
 
+ const handleChangeofUserviewing=(id)=>{
+if (id == 1) {
+  setSeeUser(tenantDetailsCampYabb[id])
+}if (id == 2) {
+  setSeeUser(tenantDetailsGareRoute[id])
+}if (id == 3) {
+  setSeeUser(tenantDetailsVillage[id])
+}if (id == 4) {
+  setSeeUser(tenantDetailsChantier[id])
+}
+
+ }
   const navigate = useNavigate();
 
   const handleNaviagtiontoHomePage = () => {
@@ -298,7 +317,7 @@ const tenantsNamesVillage = [
         handleNaviagtiontoHomePage,
         handleNaviagtiontoHouse,
         houseNames,
-        tenantDetailsCampYabb,tenantsNamesCampYabb,tenantDetailsGareRoute,tenantsNamesGareRoute,tenantDetailsVillage,tenantsNamesVillage,tenantDetailsChantier,tenantsNamesChantier
+        tenantDetailsCampYabb,tenantsNamesCampYabb,tenantDetailsGareRoute,tenantsNamesGareRoute,tenantDetailsVillage,tenantsNamesVillage,tenantDetailsChantier,tenantsNamesChantier,handleChangeofUserviewing,seeUser,setSeeUser
     }
     
     
