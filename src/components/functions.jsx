@@ -26,7 +26,8 @@ const AllFunctions = () => {
   ["App9", "Ms Emily Davis"],
   ["App10", "Mr Michael Wilson"],
   ["App11", "Ms Sarah Martinez"],
-  ["App12", "Mr James Garcia"]],["4"]
+  ["App12", "Mr James Garcia"],
+  ["App13", "Empty"]],["4"]
   ];
   
   const tenantDetailsChantier = [
@@ -114,6 +115,13 @@ const AllFunctions = () => {
         ["12", "200,000XAF", "2Y  7M  25D", "200,000XAF", "1 month unpaid"],
       ],
     ],
+    [
+      [tenantImage4],
+      [
+        ["13", "Empty", "0", "0"],
+        ["13", "Empty", "0", "0XAF", "0 months unpaid"],
+      ],
+    ],
   ];
 
 
@@ -121,7 +129,9 @@ const AllFunctions = () => {
 const tenantsNamesCampYabb = [
  [ ["App1", "Mr Guenebe Louis"],
   ["App2", "Mr Hamadou"],
-  ["App3", "Mr aksodh"]],[1]
+  ["App3", "Mr aksodh"],
+  ["App4", "Empty"],
+  ["App5", "Empty"]],[1]
    
 ];
 
@@ -147,6 +157,19 @@ const tenantDetailsCampYabb = [
       ["3", "180,000XAF", "3Y  2M  29D", "2,160,000XAF", "12 months unpaid"],
     ],
   ],
+  [
+    [tenantImage4],
+    [
+      ["4", "Empty", "0", "0"],
+      ["4", "Empty", "0", "0XAF", "0 months unpaid"],
+    ],
+  ],[
+    [tenantImage4],
+    [
+      ["5", "Empty", "0", "0"],
+      ["5", "Empty", "0", "0XAF", "0 months unpaid"],
+    ],
+  ],
    
 ];
 
@@ -158,7 +181,8 @@ const tenantsNamesGareRoute= [
   ["App3", "Mr aksodh"],
   ["App4", "MrXYZAS"],
   ["App5", "Mr gdye"],
-  ["App6", " Xyzhsdjas"]],[2]
+  ["App6", " Xyzhsdjas"],
+  ["App7", "Empty"]],[2]
 ];
 
 const tenantDetailsGareRoute = [
@@ -202,6 +226,13 @@ const tenantDetailsGareRoute = [
     [
       ["6", "Mr Xyzhsdjas", "200000xaf", "20-08-2022"],
       ["6", "200,000XAF", "2Y  1M  16D", "0XAF", "0 months unpaid"],
+    ],
+  ],
+  [
+    [tenantImage4],
+    [
+      ["7", "Empty", "0", "0"],
+      ["7", "Empty", "0", "0XAF", "0 months unpaid"],
     ],
   ],
 ];
@@ -285,15 +316,24 @@ const tenantsNamesVillage = [
   chantier:tenantDetailsChantier[0],
  })
 
- const handleChangeofUserviewing=(id)=>{
-if (id == 1) {
-  setSeeUser(tenantDetailsCampYabb[id])
-}if (id == 2) {
-  setSeeUser(tenantDetailsGareRoute[id])
-}if (id == 3) {
-  setSeeUser(tenantDetailsVillage[id])
-}if (id == 4) {
-  setSeeUser(tenantDetailsChantier[id])
+ const handleChangeofUserviewing=(user,id)=>{
+if (user == 1) {
+  setSeeUser((prevState)=>({...prevState, campYabbassi:tenantDetailsCampYabb[id]}))
+}if (user == 2) {
+   setSeeUser((prevState)=>({
+    ...prevState,
+    gareRoutier:tenantDetailsGareRoute[id]
+   }))
+}if (user == 3) {
+   setSeeUser((prevState)=>({
+    ...prevState,
+    village:tenantDetailsVillage[id]    
+   }))
+}if (user == 4) {
+   setSeeUser((prevState)=>({
+    ...prevState,
+    chantier:tenantDetailsChantier[id]
+   }))
 }
 
  }

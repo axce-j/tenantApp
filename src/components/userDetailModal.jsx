@@ -27,15 +27,18 @@ import AllFunctions from "./functions";
 function UserDetailModal(props) {
   
   const itemId=props.itemId;
+  const tenantsNames=props.tenantsNames;
+  const houseUserId=tenantsNames[1]
   const {seeUser,handleChangeofUserviewing}=AllFunctions()
   const houseuserName= props.houseuserName
   const tenant= seeUser[houseuserName]&& seeUser[houseuserName]
-  console.log(tenant[2]);
-  //  console.log(itemId);
+  console.log(houseUserId);
+  console.log(itemId);
+  console.log(tenant)
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Box className="w-6 h-6" onClick={() => { onOpen(); handleChangeofUserviewing(itemId); }}>
+      <Box className="w-6 h-6" onClick={() => { onOpen(); handleChangeofUserviewing( houseUserId ,itemId); }}>
   <img src={eyeIcon} alt="eye icon" />
 </Box>
 
@@ -164,7 +167,7 @@ function UserDetailModal(props) {
             minHeight={{ base: "32rem", sm: "auto" }}
             className="flex items-center justify-center"
           >
-            <Box className="w-full flex-col mobile:text-xs md:text-xs lg:text-base justify-center items-center">
+            <Box className="w-full flex flex-col mobile:text-xs md:text-xs lg:text-base justify-center items-center">
               <Image
                 bgColor="rgba(36,54,88,.5)"
                 objectFit="cover"
@@ -191,5 +194,6 @@ function UserDetailModal(props) {
 UserDetailModal.propTypes = {
   itemId: PropTypes.number,
   houseuserName: PropTypes.string,
+  tenantsNames: PropTypes.arrayOf(PropTypes.any),
 };
 export default UserDetailModal;
