@@ -48,68 +48,14 @@ const Home = () => {
                 );
               })}
 
-            {/* <div
-          
-            className="bg-white mobile:w-24 mobile:h-24 lgMobile:w-32 lgMobile:h-32 sm:w-48 sm:h-48 xl:w-64 xl:h-64 flex items-center justify-center  text-[rgba(193,242,217)] font-bold mobile:text-[8px]   sm:text-xs xl:text-xl    cursor-pointer"
-            style={{
-              borderRadius: "20% 65% 34% 66% / 59% 64% 36% 41%",
-              backgroundColor: " rgb(27,232,186)",
-              background:
-                " linear-gradient(  rgba(140,47,47,0.3232143882943803) 24%, rgba(43,127,218,0.4865197104232318) 63%)",
-              // boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
-              backdropFilter: "blur( 9.5px )",
-              WebkitBackdropFilter: "blur( 9.5px )",
-              transition:"width 0.5s ease-in, height 0.5s ease-in"
-            }}
-            onClick={() => handleNaviagtiontoHouse("gareRoutier")}
-          >
-            Gare Routier House
-          </div>
-
-          <div
-          
-            className="bg-white mobile:w-24 mobile:h-24 lgMobile:w-32 lgMobile:h-32 sm:w-48 sm:h-48 xl:w-64 xl:h-64 flex items-center justify-center  text-[rgba(193,242,217)] font-bold mobile:text-[8px] sm:text-xs xl:text-xl   cursor-pointer"
-            style={{
-              borderRadius: "20% 65% 34% 66% / 59% 64% 36% 41%",
-              backgroundColor: " rgb(27,232,186)",
-              background:
-                " linear-gradient(  rgba(40,147,47,0.3232143882943803) 24%, rgba(43,127,218,0.4865197104232318) 63%)",
-              // boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
-              backdropFilter: "blur( 9.5px )",
-              WebkitBackdropFilter: "blur( 9.5px )",
-              transition:"width 0.5s ease-in, height 0.5s ease-in"
-            }}
-            onClick={() => handleNaviagtiontoHouse("village")}
-          >
-            Village House
-          </div>
-
-          <div
-          
-            className="bg-white mobile:w-24 mobile:h-24 lgMobile:w-32 lgMobile:h-32 sm:w-48 sm:h-48 xl:w-64 xl:h-64 flex items-center justify-center  text-[rgba(193,242,217)] font-bold mobile:text-[8px] sm:text-xs xl:text-xl    cursor-pointer"
-            style={{
-              borderRadius: "20% 65% 34% 66% / 59% 64% 36% 41%",
-              backgroundColor: " rgb(27,232,186)",
-              background:
-                " linear-gradient(  rgba(90,47,147,0.3232143882943803) 24%, rgba(43,127,218,0.4865197104232318) 63%)",
-              // boxShadow: "0 8px 32px 0 rgba( 31, 38, 135, 0.37 )",
-              backdropFilter: "blur( 9.5px )",
-              WebkitBackdropFilter: "blur( 9.5px )",
-              transition:"width 0.5s ease-in, height 0.5s ease-in"
-            }}
-            onClick={() => handleNaviagtiontoHouse("chantier")}
-          >
-            Chantier House
-          </div> */}
+           
           </div>
         </div>
       </div>
     </div>
   );
 
-  // <div  className="w-full">
-  //   <FooterSection />
-  // </div>
+  
 };
 
 export default Home;

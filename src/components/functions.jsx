@@ -33,7 +33,7 @@ const AllFunctions = () => {
     [
       [tenantImage],
       [
-        ["1", "Mr Guenebe Louis", "200000xaf", "23-06-2020"],
+        ["1", "Mr   Louis", "200000xaf", "23-06-2020"],
         ["1", "200,000XAF", "1Y  5M  16D", "600,000XAF", "3 months unpaid"],
       ],
     ],
@@ -279,10 +279,10 @@ const tenantsNamesVillage = [
   
 ];
  const [seeUser ,setSeeUser]=useState({
-  campYabb:tenantDetailsCampYabb[0],
-  GareRoute:tenantDetailsGareRoute[0],
-  Village:tenantDetailsVillage[0],
-  Chantier:tenantDetailsChantier[0],
+  campYabbassi:tenantDetailsCampYabb[0],
+  gareRoutier:tenantDetailsGareRoute[0],
+  village:tenantDetailsVillage[0],
+  chantier:tenantDetailsChantier[0],
  })
 
  const handleChangeofUserviewing=(id)=>{

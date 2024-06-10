@@ -10,7 +10,6 @@ import {
     useDisclosure,
   } from "@chakra-ui/react";
   
-  import FormikExample from "./inputLoginComponent";
 import SignUpComponent from "./inputSignupComponent";
   function SignUpModal() {
     const { isOpen, onOpen, onClose } = useDisclosure();

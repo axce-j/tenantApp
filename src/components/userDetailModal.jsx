@@ -13,33 +13,25 @@ import {
   ModalHeader,
   ModalOverlay,
   Stack,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
+  
   useDisclosure,
 } from "@chakra-ui/react";
 import eyeIcon from "../assets/eye-icon.png";
 // import { AddIcon, TriangleDownIcon } from "@chakra-ui/icons";
 // import AllFunctions from "./functions";
 import PropTypes from "prop-types";
-import houseImage from "../assets/home-page-brown-2.png";
+
 import noUsers from "../assets/No-users-3.png";
 import AllFunctions from "./functions";
 
 function UserDetailModal(props) {
-  const tenantsNames = props.tenantsNames;
-  const tenantDetails = props.tenantDetails;
+  
   const itemId=props.itemId;
   const {seeUser,handleChangeofUserviewing}=AllFunctions()
-  console.log(seeUser);
-  const tenant= seeUser.Chantier
-  // console.log(tenantDetails);
-  // badd way to implement house names will change later
-  // const { houseNames } = AllFunctions();/
-  // console.log(houseId);
-  // console.log(houseNames[houseId]);
+  const houseuserName= props.houseuserName
+  const tenant= seeUser[houseuserName]&& seeUser[houseuserName]
+  console.log(tenant[2]);
+  //  console.log(itemId);
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -56,7 +48,7 @@ function UserDetailModal(props) {
             <ModalCloseButton />
             <ModalBody>
               <Box className="flex flex-col gap-3">
-              {tenant[1][0][1] !== "Empty" ? (
+              {tenant&&tenant[1][0][1] !== "Empty" ? (
         <Box  minHeight={{ mobile: "auto", sm: "100%" }}>
           <Card direction={{ base: "column", sm: "row" }} overflow="hidden" height={{ base: "auto", sm: "32rem" }}>
             <Image
@@ -163,7 +155,7 @@ function UserDetailModal(props) {
           </Card>
         </Box>
       ) : (
-        <Box key={index} minHeight="100%">
+        <Box minHeight="100%">
           <Card
             direction={{ base: "column", sm: "row" }}
             overflow="hidden"
@@ -197,7 +189,7 @@ function UserDetailModal(props) {
   );
 }
 UserDetailModal.propTypes = {
-  tenantsNames: PropTypes.arrayOf(PropTypes.array),
-  tenantDetails: PropTypes.arrayOf(PropTypes.array),
+  itemId: PropTypes.number,
+  houseuserName: PropTypes.string,
 };
 export default UserDetailModal;

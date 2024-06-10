@@ -27,11 +27,10 @@ import UserDetailModal from "./userDetailModal";
 const HouseTemplate = (props) => {
   const tenantsNames = props.tenantsNames;
   const tenantDetails = props.tenantDetails;
-  // badd way to implement house names will change later
-  const { houseNames } = AllFunctions();
+   const { houseNames } = AllFunctions();
   const houseId = tenantsNames[1][0] - 1;
-  // console.log(houseId);
-  // console.log(houseNames[houseId]);
+  const houseuserName= houseNames[houseId][1][2]
+    
 
   return (
     <Box className="flex flex-col  justify-center px-6  sm:pb-32  ">
@@ -53,61 +52,7 @@ const HouseTemplate = (props) => {
       </Box>
 
       <Box className=" mobile:hidden sm:flex mobile:flex-col sm:flex-col-reverse gap-8">
-        {/* <Box className=" flex justify-center">
-          <Box className="text-white flex flex-col gap-4 w-[70%]">
-            <Box className="flex gap-4 mobile:pl-4  items-center  ">
-              <span>Appartments</span>{" "}
-              <AddIcon
-                className="bg-[rgba(22,221,132,.5)] p-2 font-bold rounded-full"
-                boxSize={6}
-              />
-            </Box>
-
-            <Box
-              className=" flex flex-col  mobile:justify-center mobile:items-start
-         lgMobile:justify-start lgMobile:items-start 
-         sm:justify-start sm:items-start  gap-6 p-1  overflow-x-scroll   "
-              sx={{
-                "&::-webkit-scrollbar": {
-                  height: "6px", // Change the height of the scrollbar
-                },
-                "&::-webkit-scrollbar-thumb": {
-                  backgroundColor: " rgba(81, 90, 85, 0.4)", // Change the color of the scrollbar thumb
-                  borderRadius: "4px", // Change the border radius of the scrollbar thumb
-                },
-                "&::-webkit-scrollbar-track": {
-                  backgroundColor: "transparent", // Change the color of the scrollbar track
-                },
-              }}
-            >
-              <Box className=" flex mobile:gap-5   sm:gap-4     ">
-                {tenantsNames[0] &&
-                  tenantsNames[0]?.map((items, index) => {
-                    return (
-                      <div
-                        key={index}
-                        className="  mobile:w-24 mobile:h-24 sm:w-32 sm:h-32 flex flex-col justify-center items-center relative"
-                        style={{
-                          borderRadius: "36% 37% 27% 30% / 45% 33% 48% 52%",
-                          background: "rgba( 81, 90, 85, 0.8 )",
-                          // boxShadow: "0 5px 17px 0 rgba( 21, 138, 35, 0.37 )",
-                          backdropFilter: "blur( 7.5px )",
-                          WebkitBackdropFilter: "blur( 7.5px )",
-                        }}
-                      >
-                        <Box className=" flex justify-center items-center bg-[rgba(22,221,132,.5)] sm:w-10 sm:h-10 mobile:w-6  mobile:h-6 rounded-full p-2 lg:text-[10px] mobile:text-[6px] sm:text-xs font-bold absolute    mobile:top-2 mobile:left-4  ">
-                          {items[0]}
-                        </Box>
-                        <Box className="pt-2 mobile:text-[8px] sm:text-[12px]  mt-4 lg:text-base text-center  font-bold">
-                          {items[1]}
-                        </Box>
-                      </div>
-                    );
-                  })}
-              </Box>
-            </Box>
-          </Box>
-        </Box> */}
+        
 
         <Tabs
           isFitted
@@ -491,6 +436,7 @@ const HouseTemplate = (props) => {
                             tenantDetails={tenantDetails}
                             tenantsNames={tenantsNames}
                             itemId={Number(index)}
+                            houseuserName={houseuserName}
                           />
                         </Box>
                       </Box>
