@@ -1,10 +1,11 @@
-import { AddIcon, TriangleDownIcon } from "@chakra-ui/icons";
+import { AddIcon,  TriangleDownIcon } from "@chakra-ui/icons";
 import PropTypes from "prop-types";
 import AllFunctions from "./functions";
 import houseImage from "../assets/home-page-brown-2.png";
 import eyeIcon from "../assets/eye-icon.png";
 import noUsers from "../assets/No-users-3.png";
 import userImage from "../assets/tenantImage5.png";
+import ChangeUserModal from "./Modals/changeUserModal";
 // import AllFunctions from "../components/functions";
 import {
   Box,
@@ -21,8 +22,8 @@ import {
   TabPanels,
   Tabs,
 } from "@chakra-ui/react";
-import BasicUsage from "./modal";
-import UserDetailModal from "./userDetailModal";
+import BasicUsage from "./Modals/HouseChangemodal";
+import UserDetailModal from "./Modals/userDetailModal";
 
 const HouseTemplate = (props) => {
   const tenantsNames = props.tenantsNames;
@@ -30,6 +31,7 @@ const HouseTemplate = (props) => {
    const { houseNames } = AllFunctions();
   const houseId = tenantsNames[1][0] - 1;
   const houseuserName= houseNames[houseId][1][2]
+  console.log(tenantsNames);
     
 
   return (
@@ -50,7 +52,7 @@ const HouseTemplate = (props) => {
           </span>
         </Box>
       </Box>
-
+{/* Desktop version begin  */}
       <Box className=" mobile:hidden sm:flex mobile:flex-col sm:flex-col-reverse gap-8">
         
 
@@ -72,15 +74,15 @@ const HouseTemplate = (props) => {
             gap="6"
             className="text-white"
           >
-            <Box className="flex gap-4 sm:hidden mobile:pl-4  items-center justify-center ">
+            {/* <Box className="flex gap-4 sm:hidden mobile:pl-4  items-center justify-center ">
               <span> View Tenants</span>{" "}
               <TriangleDownIcon
                 className="bg-[rgba(109,75,62,1)] p-2 font-bold rounded-full"
                 boxSize={6}
               />
-            </Box>
+            </Box> */}
 
-            <Box className="flex mobile:hidden gap-4 mobile:pl-4  items-center  ">
+            <Box className="flex  gap-4 mobile:pl-4  items-center  ">
               <span>Tenants</span>{" "}
               <AddIcon
                 className="bg-[rgba(109,75,62,1)] p-2 font-bold rounded-full"
@@ -170,7 +172,7 @@ const HouseTemplate = (props) => {
                         direction={{ base: "column", sm: "row" }}
                         overflow="hidden"
                         // variant="outline"
-                        height={{ base: "auto", sm: "32rem" }}
+                        height={{ base: "auto", sm: "36rem" }}
                       >
                         <Image
                           bgColor="rgba(36,54,88,.5)"
@@ -359,10 +361,13 @@ const HouseTemplate = (props) => {
           </TabPanels>
         </Tabs>
       </Box>
+{/* Desktop version end */}
 
-      <Box className=" mobile:flex sm:hidden mobile:flex-col sm:flex-col-reverse gap-8">
-        <Box>
-          {" "}
+{/* mobile version begin */}
+      <Box className=" mobile:flex sm:hidden mobile:flex-col sm:flex-col-reverse gap-5">
+           {" "}
+
+          <Box className="flex justify-between">
           <Box className="flex gap-4 sm:hidden mobile:pl-4  items-center justify-center text-white">
             <span> View Tenants</span>{" "}
             <TriangleDownIcon
@@ -370,13 +375,13 @@ const HouseTemplate = (props) => {
               boxSize={6}
             />
           </Box>
-          <Box className="flex mobile:hidden gap-4 mobile:pl-4  items-center text-white ">
-            <span>Tenants</span>{" "}
-            <AddIcon
-              className="bg-[rgba(109,75,62,1)] p-2 font-bold rounded-full"
-              boxSize={6}
-            />
+           <ChangeUserModal tenantsNames={tenantsNames}/>
+
           </Box>
+         
+
+
+
           <Box
             mb="1em"
             display="flex"
@@ -446,7 +451,8 @@ const HouseTemplate = (props) => {
             </Box>
           </Box>
         </Box>
-      </Box>
+ 
+      {/* mobile version end */}
     </Box>
   );
 };

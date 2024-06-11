@@ -1,6 +1,6 @@
  
-import AllFunctions from "../components/functions";
-import HouseTemplate from "../components/houseTemplate";
+import AllFunctions from "../../components/functions";
+import HouseTemplate from "../../components/houseTemplate";
 
 const VillageHouse = () => {
 

@@ -10,7 +10,7 @@ import {
     useDisclosure,
   } from "@chakra-ui/react";
   
-import SignUpComponent from "./inputSignupComponent";
+import SignUpComponent from "../inputSignupComponent";
   function SignUpModal() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     // const { houseNames, handleNaviagtiontoHouse } = AllFunctions();

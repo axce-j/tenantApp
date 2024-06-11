@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import Welcome from "./Pages/welcome.jsx"
-import Home from "./Pages/home.jsx"
-import CampYabbHouse from "./Pages/campYabbHouse.jsx" 
-import ChantierHouse from "./Pages/chantierHouse.jsx"
-import GarRouteHouse from "./Pages/garRouteHouse.jsx"
-import VillageHouse from "./Pages/villageHouse.jsx"
+import Welcome from "./Pages/IndexPage/welcome.jsx"
+import Home from "./Pages/Home/home.jsx"
+import CampYabbHouse from "./Pages/CampYabbHouse/campYabbHouse.jsx" 
+import ChantierHouse from "./Pages/ChantierHouse/chantierHouse.jsx"
+import GarRouteHouse from "./Pages/GarerouteHouse/garRouteHouse.jsx"
+import VillageHouse from "./Pages/VillageHouse/villageHouse.jsx"
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {

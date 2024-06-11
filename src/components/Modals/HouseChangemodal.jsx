@@ -9,7 +9,7 @@ import {
   ModalOverlay,
   useDisclosure,
 } from "@chakra-ui/react";
-import AllFunctions from "./functions";
+import AllFunctions from "../functions";
 function BasicUsage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { houseNames, handleNaviagtiontoHouse } = AllFunctions();
@@ -35,7 +35,8 @@ function BasicUsage() {
                   return (
                     <Button
                       key={index}
-                      colorScheme="green"
+                      bg="rgba(111, 72, 66, 1)"
+                      color="white"
                       mr={3}
                       onClick={(onClose, () => handleNaviagtiontoHouse(`${items[1][2]}`))}
                     >

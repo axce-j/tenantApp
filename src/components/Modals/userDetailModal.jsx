@@ -16,13 +16,13 @@ import {
   
   useDisclosure,
 } from "@chakra-ui/react";
-import eyeIcon from "../assets/eye-icon.png";
+import eyeIcon from "../../assets/eye-icon.png";
 // import { AddIcon, TriangleDownIcon } from "@chakra-ui/icons";
 // import AllFunctions from "./functions";
 import PropTypes from "prop-types";
 
-import noUsers from "../assets/No-users-3.png";
-import AllFunctions from "./functions";
+import noUsers from "../../assets/No-users-3.png";
+import AllFunctions from "../functions";
 
 function UserDetailModal(props) {
   
@@ -32,9 +32,9 @@ function UserDetailModal(props) {
   const {seeUser,handleChangeofUserviewing}=AllFunctions()
   const houseuserName= props.houseuserName
   const tenant= seeUser[houseuserName]&& seeUser[houseuserName]
-  console.log(houseUserId);
-  console.log(itemId);
-  console.log(tenant)
+  // console.log(houseUserId);
+  // console.log(itemId);
+  // console.log(tenant)
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
@@ -47,7 +47,7 @@ function UserDetailModal(props) {
         <ModalOverlay />
         <Box>
           <ModalContent>
-            <ModalHeader>Sign-in</ModalHeader>
+            <ModalHeader>Summary</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
               <Box className="flex flex-col gap-3">
@@ -124,7 +124,7 @@ function UserDetailModal(props) {
                     }}
                     className="flex justify-between text-white italic p-1 px-3 rounded font-bold mobile:gap-3"
                   >
-                    <span>Rent/month</span>
+                    <span>Duration of residency</span>
                     <div>{tenant[1][1][2]}</div>
                   </Box>
                   <Box
@@ -148,9 +148,12 @@ function UserDetailModal(props) {
                     <span>{tenant[1][1][4]}</span>
                   </Box>
                 </CardBody>
-                <CardFooter paddingTop="0">
+                <CardFooter paddingTop="0" display='flex' gap="8">
                   <Button variant="solid" padding={4} className="bg-gray-200">
                     Edit
+                  </Button>
+                  <Button variant="solid" padding={4} className="bg-black">
+                    View History
                   </Button>
                 </CardFooter>
               </Stack>

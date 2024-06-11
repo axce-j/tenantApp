@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
-import downButton from "../assets/chevron-double-down.png";
-import AllFunctions from "../components/functions";
+import downButton from "../../assets/chevron-double-down.png";
+import AllFunctions from "../../components/functions";
 
 const Home = () => {
   const { handleNaviagtiontoHouse, houseNames } = AllFunctions();

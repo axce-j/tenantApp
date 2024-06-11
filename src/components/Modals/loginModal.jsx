@@ -9,7 +9,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 
-import FormikExample from "./inputLoginComponent";
+import FormikExample from "../inputLoginComponent";
 function LoginModal() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   // const { houseNames, handleNaviagtiontoHouse } = AllFunctions();
