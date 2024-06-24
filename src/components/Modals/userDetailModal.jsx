@@ -36,6 +36,7 @@ function UserDetailModal(props) {
   // console.log(itemId);
   // console.log(tenant)
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const {handleNaviagtiontoHouse}=AllFunctions()
   return (
     <>
       <Box className="w-6 h-6" onClick={() => { onOpen(); handleChangeofUserviewing( houseUserId ,itemId); }}>
@@ -152,7 +153,7 @@ function UserDetailModal(props) {
                   <Button variant="solid" padding={4} className="bg-gray-200">
                     Edit
                   </Button>
-                  <Button variant="solid" padding={4} className="bg-black">
+                  <Button variant="solid" padding={4} className="bg-black" onClick={()=>handleNaviagtiontoHouse("houseDetails")}>
                     View History
                   </Button>
                 </CardFooter>

@@ -7,27 +7,51 @@ import {
   MenuList,
   MenuItem,
   Input,
+  Accordion,
+  AccordionButton,
+  AccordionPanel,
+  AccordionItem,
 } from "@chakra-ui/react";
 
 function CustomSelect() {
-  const [customValue, setCustomValue] = useState("");
+  const [customValue, setCustomValue] = useState("Select");
+  // const selectedValue= null || customValue
+ const  handleSelectionClick=(event)=>{
+if(event){
+  setCustomValue(event)
+} 
+ }
 
   return (
     <Box width="60%">
-      <Menu>
+<Accordion>
+  
+    <AccordionItem>
+
+  <AccordionButton>tt</AccordionButton>
+    </AccordionItem>
+    <AccordionItem>dd</AccordionItem>
+  
+</Accordion>
+
+
+      {/* <Menu  closeOnSelect={customValue && customValue == "Custome Time" ? false : null}>
         <MenuButton as={Button} width="100%">
-          Select
+          {customValue}
         </MenuButton>
+        
         <MenuList>
-          <MenuItem onClick={() => alert("Option 1 Selected")}>
+          <MenuItem onClick={() => handleSelectionClick('Monthly')}>
             Monthly
           </MenuItem>
-          <MenuItem onClick={() => alert("Option 2 Selected")}>
+          <MenuItem onClick={() => handleSelectionClick('Annually')}>
             Annually
           </MenuItem>
-          <MenuItem>Custom Value</MenuItem>
+          <MenuItem onClick={() => handleSelectionClick('Custom Time')}>Custom Time</MenuItem>
+          <MenuItem onClick={() => handleSelectionClick("value")}> <Input></Input></MenuItem>
+
         </MenuList>
-      </Menu>
+      </Menu> */}
     </Box>
   );
 }

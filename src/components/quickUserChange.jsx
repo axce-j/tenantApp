@@ -48,6 +48,21 @@ const QuickUserChange = (props) => {
             {({ field, form }) => (
               <Box>
                 <FormControl isInvalid={form.errors.name && form.touched.name}>
+                  <FormLabel>First Name</FormLabel>
+                  <Input {...field[1]} placeholder="Paul" />
+                  <FormErrorMessage>{form.errors.name}</FormErrorMessage>
+                </FormControl>
+                <FormControl isInvalid={form.errors.name && form.touched.name}>
+                  <FormLabel>Midlle Name</FormLabel>
+                  <Input {...field[1]} placeholder="Paul" />
+                  <FormErrorMessage>{form.errors.name}</FormErrorMessage>
+                </FormControl>
+                <FormControl isInvalid={form.errors.name && form.touched.name}>
+                  <FormLabel>Other Names</FormLabel>
+                  <Input {...field[1]} placeholder="Paul" />
+                  <FormErrorMessage>{form.errors.name}</FormErrorMessage>
+                </FormControl>
+                <FormControl isInvalid={form.errors.name && form.touched.name}>
                   <FormLabel> Select HouseId</FormLabel>
                   <Select placeholder="Select option">
                     <option value="option1">Option 1</option>
@@ -74,21 +89,6 @@ const QuickUserChange = (props) => {
                       })}
                   </Select>
                   {/* <Input {...field[1]} placeholder="amount" /> */}
-                  <FormErrorMessage>{form.errors.name}</FormErrorMessage>
-                </FormControl>
-                <FormControl isInvalid={form.errors.name && form.touched.name}>
-                  <FormLabel>First Name</FormLabel>
-                  <Input {...field[1]} placeholder="Paul" />
-                  <FormErrorMessage>{form.errors.name}</FormErrorMessage>
-                </FormControl>
-                <FormControl isInvalid={form.errors.name && form.touched.name}>
-                  <FormLabel>Midlle Name</FormLabel>
-                  <Input {...field[1]} placeholder="Paul" />
-                  <FormErrorMessage>{form.errors.name}</FormErrorMessage>
-                </FormControl>
-                <FormControl isInvalid={form.errors.name && form.touched.name}>
-                  <FormLabel>Other Names</FormLabel>
-                  <Input {...field[1]} placeholder="Paul" />
                   <FormErrorMessage>{form.errors.name}</FormErrorMessage>
                 </FormControl>
                 <FormControl isInvalid={form.errors.name && form.touched.name}>

@@ -5,8 +5,9 @@ import CampYabbHouse from "./Pages/CampYabbHouse/campYabbHouse.jsx"
 import ChantierHouse from "./Pages/ChantierHouse/chantierHouse.jsx"
 import GarRouteHouse from "./Pages/GarerouteHouse/garRouteHouse.jsx"
 import VillageHouse from "./Pages/VillageHouse/villageHouse.jsx"
-import '@fortawesome/fontawesome-free/css/all.min.css';
-
+ import '@fortawesome/fontawesome-free/css/all.min.css';
+import HouseDetails from "./Pages/HouseDetails/houseDetails.jsx";
+ 
 function App() {
   return (
     // <div className=" bg-[rgba(4,12,28,1)] border-transparent 
@@ -24,7 +25,9 @@ function App() {
       <Route path="/chantier"element={<ChantierHouse/>} /> 
       <Route path="/gareRoutier" element={<GarRouteHouse/>} />
       <Route path="/village" element={<VillageHouse/>} />
-      <Route path="error"/>
+      <Route path="/houseDetails" element={<HouseDetails/>} />
+
+       <Route path="error"/>
     </Routes>
     </div>
     
