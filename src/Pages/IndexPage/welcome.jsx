@@ -8,7 +8,7 @@ const Welcome = () => {
   // const { handleNaviagtiontoHomePage } = AllFunctions();
   return (
     <div className="w-full h-[100vh] ">
-      <div className="flex flex-col w-full h-full justify-center items-center  relative">
+      <div className="relative flex flex-col items-center justify-center w-full h-full">
         <Box>
           <Box className="absolute top-4 right-6">
             <SignUpModal />
@@ -16,7 +16,7 @@ const Welcome = () => {
 
           <Box className="flex flex-col gap-24">
             <div className="flex items-center justify-center gap-3">
-              <div className="text-white font-bold mobile:text-xl sm:text-5xl text-center">
+              <div className="font-bold text-center text-white mobile:text-xl sm:text-5xl">
                 Welcome
               </div>
 

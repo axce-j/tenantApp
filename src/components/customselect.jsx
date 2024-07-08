@@ -1,26 +1,20 @@
-import { useState } from "react";
+// import { useState } from "react";
 import {
   Box,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Input,
+  
   Accordion,
   AccordionButton,
-  AccordionPanel,
-  AccordionItem,
+   AccordionItem,
 } from "@chakra-ui/react";
 
 function CustomSelect() {
-  const [customValue, setCustomValue] = useState("Select");
-  // const selectedValue= null || customValue
- const  handleSelectionClick=(event)=>{
-if(event){
-  setCustomValue(event)
-} 
- }
+//   const [customValue, setCustomValue] = useState("Select");
+//   // const selectedValue= null || customValue
+//  const  handleSelectionClick=(event)=>{
+// if(event){
+//   setCustomValue(event)
+// } 
+//  }
 
   return (
     <Box width="60%">

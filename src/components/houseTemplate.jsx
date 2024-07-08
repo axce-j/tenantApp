@@ -23,25 +23,25 @@ import {
   Tabs,
 } from "@chakra-ui/react";
 import BasicUsage from "./Modals/HouseChangemodal";
-import UserDetailModal from "./Modals/userDetailModal";
-
+import UserDetailModal from "./Modals/userDeatailModal";
+ 
 const HouseTemplate = (props) => {
   const tenantsNames = props.tenantsNames;
   const tenantDetails = props.tenantDetails;
    const { houseNames } = AllFunctions();
   const houseId = tenantsNames[1][0] - 1;
   const houseuserName= houseNames[houseId][1][2]
-  console.log(tenantsNames);
+  // console.log(tenantsNames);
     
 
   return (
-    <Box className="flex flex-col  justify-center px-6  sm:pb-32  ">
+    <Box className="flex flex-col justify-center px-6 sm:pb-32 ">
       <Box className="ml-[-14px] pt-2">
         {" "}
         <BasicUsage />{" "}
       </Box>
 
-      <Box className="  flex flex-col gap-4 justify-center items-center w-full mobile:mb-12">
+      <Box className="flex flex-col items-center justify-center w-full gap-4  mobile:mb-12">
         <Box className="mobile:text-2xl bread-words sm:text-5xl text-[rgba(220,239,214,.95)] font-bold">
           {houseNames[houseId][1][0]}
         </Box>
@@ -53,7 +53,7 @@ const HouseTemplate = (props) => {
         </Box>
       </Box>
 {/* Desktop version begin  */}
-      <Box className=" mobile:hidden sm:flex mobile:flex-col sm:flex-col-reverse gap-8">
+      <Box className="gap-8  mobile:hidden sm:flex mobile:flex-col sm:flex-col-reverse">
         
 
         <Tabs
@@ -74,7 +74,7 @@ const HouseTemplate = (props) => {
             gap="6"
             className="text-white"
           >
-            {/* <Box className="flex gap-4 sm:hidden mobile:pl-4  items-center justify-center ">
+            {/* <Box className="flex items-center justify-center gap-4 sm:hidden mobile:pl-4 ">
               <span> View Tenants</span>{" "}
               <TriangleDownIcon
                 className="bg-[rgba(109,75,62,1)] p-2 font-bold rounded-full"
@@ -82,7 +82,7 @@ const HouseTemplate = (props) => {
               />
             </Box> */}
 
-            <Box className="flex  gap-4 mobile:pl-4  items-center  ">
+            <Box className="flex items-center gap-4 mobile:pl-4 ">
               <span>Tenants</span>{" "}
               <AddIcon
                 className="bg-[rgba(109,75,62,1)] p-2 font-bold rounded-full"
@@ -112,7 +112,7 @@ const HouseTemplate = (props) => {
                 },
               }}
             >
-              <Box className="flex flex-col w-full items-start justify-start">
+              <Box className="flex flex-col items-start justify-start w-full">
                 {tenantsNames[0] &&
                   tenantsNames[0]?.map((items, index) => {
                     return (
@@ -127,7 +127,7 @@ const HouseTemplate = (props) => {
                           bg: "rgba(250,239,244,.25)",
                         }}
                       >
-                        <Box className="w-full flex  items-center justify-between">
+                        <Box className="flex items-center justify-between w-full">
                           <Box className="flex w-[66%] items-center justify-start gap-12">
                             <div
                               style={{
@@ -137,7 +137,7 @@ const HouseTemplate = (props) => {
                                 width: "40px", // Adjust the width as necessary
                                 height: "40px", // Adjust the height as necessary
                               }}
-                              className="flex  items-end font-bold py-1 justify-center"
+                              className="flex items-end justify-center py-1 font-bold"
                             >
                               <span>{index + 1}</span>
                             </div>
@@ -184,7 +184,7 @@ const HouseTemplate = (props) => {
                         />
                         <Box
                           display="flex"
-                          className="w-full mobile:flex-col mobile:text-xs md:text-xs lg:text-base sm:flex-col justify-between"
+                          className="justify-between w-full mobile:flex-col mobile:text-xs md:text-xs lg:text-base sm:flex-col"
                         >
                           <Stack width="100%">
                             <CardBody
@@ -207,7 +207,7 @@ const HouseTemplate = (props) => {
                                     background:
                                       "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,63,130,0.8688725490196079) 46%)",
                                   }}
-                                  className="flex justify-between text-white italic p-1 px-3 rounded font-bold"
+                                  className="flex justify-between p-1 px-3 italic font-bold text-white rounded"
                                 >
                                   <span>Name:</span>
                                   <span>{items[1][0][1]}</span>
@@ -218,7 +218,7 @@ const HouseTemplate = (props) => {
                                     background:
                                       "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,63,130,0.8688725490196079) 46%)",
                                   }}
-                                  className="flex justify-between text-white italic p-1 px-3 rounded font-bold"
+                                  className="flex justify-between p-1 px-3 italic font-bold text-white rounded"
                                 >
                                   <span>Rent:</span>
                                   <span> {items[1][0][2]}</span>
@@ -229,7 +229,7 @@ const HouseTemplate = (props) => {
                                     background:
                                       "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,63,130,0.8688725490196079) 46%)",
                                   }}
-                                  className="flex justify-between text-white italic p-1 px-3 rounded font-bold"
+                                  className="flex justify-between p-1 px-3 italic font-bold text-white rounded"
                                 >
                                   {" "}
                                   <span>Start Date:</span>
@@ -265,7 +265,7 @@ const HouseTemplate = (props) => {
                                   background:
                                     "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,163,130,0.8688725490196079) 46%)",
                                 }}
-                                className="flex justify-between text-white italic p-1 px-3 rounded font-bold mobile:gap-3"
+                                className="flex justify-between p-1 px-3 italic font-bold text-white rounded mobile:gap-3"
                               >
                                 <span>Rent/month</span>
                                 <span>{items[1][1][1]}</span>
@@ -277,7 +277,7 @@ const HouseTemplate = (props) => {
                                   background:
                                     "linear-gradient(90deg,rgba(7,10,9,0.780098039215687) 30%, rgba(15,163,130,0.8688725490196079) 46%)",
                                 }}
-                                className="flex justify-between text-white italic p-1 px-3 rounded font-bold mobile:gap-3"
+                                className="flex justify-between p-1 px-3 italic font-bold text-white rounded mobile:gap-3"
                               >
                                 <span>Rent/month</span>
                                 <div>{items[1][1][2]}</div>
@@ -289,7 +289,7 @@ const HouseTemplate = (props) => {
                                   background:
                                     " linear-gradient(90deg, rgba(7,10,9,0.780098039215687) 30%, rgba(163,15,50,0.8688725490196079) 46%)",
                                 }}
-                                className="flex justify-between text-white italic p-1 px-3 rounded font-bold mobile:gap-3"
+                                className="flex justify-between p-1 px-3 italic font-bold text-white rounded mobile:gap-3"
                               >
                                 <span>Total rent Not payed</span>
                                 <span>{items[1][1][3]}</span>
@@ -300,7 +300,7 @@ const HouseTemplate = (props) => {
                                   background:
                                     " linear-gradient(90deg, rgba(7,10,9,0.780098039215687) 30%, rgba(163,15,50,0.8688725490196079) 46%",
                                 }}
-                                className="flex justify-between text-white italic p-1 px-3 rounded font-bold mobile:gap-3"
+                                className="flex justify-between p-1 px-3 italic font-bold text-white rounded mobile:gap-3"
                               >
                                 <span>Rent Status</span>
                                 <span>{items[1][1][4]}</span>
@@ -335,7 +335,7 @@ const HouseTemplate = (props) => {
                       >
                         <Box
                           display="flex"
-                          className="w-full  flex-col mobile:text-xs md:text-xs lg:text-base   justify-center items-center"
+                          className="flex-col items-center justify-center w-full mobile:text-xs md:text-xs lg:text-base"
                         >
                           <Image
                             bgColor="rgba(36,54,88,.5)"
@@ -346,7 +346,7 @@ const HouseTemplate = (props) => {
                             alt="Caffe Latte"
                           />
 
-                          <Box className="text-white font-bold sm:text-4xl mobile:text-2xl">
+                          <Box className="font-bold text-white sm:text-4xl mobile:text-2xl">
                             Residence Un-used
                           </Box>
                           <Box>
@@ -364,11 +364,11 @@ const HouseTemplate = (props) => {
 {/* Desktop version end */}
 
 {/* mobile version begin */}
-      <Box className=" mobile:flex sm:hidden mobile:flex-col sm:flex-col-reverse gap-5">
+      <Box className="gap-5  mobile:flex sm:hidden mobile:flex-col sm:flex-col-reverse">
            {" "}
 
           <Box className="flex justify-between">
-          <Box className="flex gap-4 sm:hidden mobile:pl-4  items-center justify-center text-white">
+          <Box className="flex items-center justify-center gap-4 text-white sm:hidden mobile:pl-4">
             <span> View Tenants</span>{" "}
             <TriangleDownIcon
               className="bg-[rgba(109,75,62,1)] p-2 font-bold rounded-full"
@@ -405,7 +405,7 @@ const HouseTemplate = (props) => {
               },
             }}
           >
-            <Box className="flex flex-col w-full items-start justify-start text-white">
+            <Box className="flex flex-col items-start justify-start w-full text-white">
               {tenantsNames[0] &&
                 tenantsNames[0]?.map((items, index) => {
                   return (
@@ -420,7 +420,7 @@ const HouseTemplate = (props) => {
                         bg: "rgba(250,239,244,.25)",
                       }}
                     >
-                      <Box className="w-full flex  items-center justify-between">
+                      <Box className="flex items-center justify-between w-full">
                         <Box className="flex w-[66%] items-center justify-start gap-12">
                           <div
                             style={{
@@ -430,7 +430,7 @@ const HouseTemplate = (props) => {
                               width: "60px", // Adjust the width as necessary
                               height: "60px", // Adjust the height as necessary
                             }}
-                            className="flex  items-end font-bold py-1 justify-center rounded-full"
+                            className="flex items-end justify-center py-1 font-bold rounded-full"
                           >
                             {/* <span>{index + 1}</span> */}
                           </div>

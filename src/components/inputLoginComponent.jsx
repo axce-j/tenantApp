@@ -4,6 +4,7 @@
 import { Box, Button, FormControl, FormErrorMessage, FormLabel, Input } from "@chakra-ui/react"
 import { Field, Form, Formik } from "formik"
 import AllFunctions from "./functions";
+import PropTypes from "prop-types";
 
 
 function FormikExample() {
@@ -64,3 +65,6 @@ function FormikExample() {
     )
   }
   export default FormikExample
+  FormikExample.propTypes = {
+    isSubmitting: PropTypes.any
+ };
