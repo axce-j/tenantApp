@@ -153,7 +153,7 @@ const HouseDetails = () => {
                       <AccordionPanel
                         pb={4}
                         display="grid"
-                        gridTemplateColumns="1fr 1fr"
+                        gridTemplateColumns={{base:"none", sm:"1fr 1fr"}}
                         gap="6px"
                       >
                         {/* <Grid
@@ -194,37 +194,39 @@ const HouseDetails = () => {
                                       <Box>{items.Name}</Box>{" "}
                                     </Box>
                                     <Box className="flex items-center gap-3 pl-2 ">
-                                      <InfoIcon
-                                        color={
-                                          items.Status === "Not Payed"
-                                            ? "Red"
-                                            : items.Status === "Pending"
-                                            ? "yellow"
-                                            : "green.300"
-                                        }
-                                      />
-                                      <Box>{items.Status}</Box>
+                                    <i className="fa fa-credit-card-alt" aria-hidden="true"  style={{
+    color: items.Status === "Not Payed" 
+      ? "rgba(225,0,0,1)" 
+      : items.Status === "Pending" 
+      ? "rgba(249,249,7,1)" 
+      : "rgba(0,225,112,1)"
+  }}></i>
+                                      
+ 
+                                       
+                                   
+                                       <Box>{items.Status}</Box>
                                     </Box>
                                   </Stack>
                                   <Stack className="flex "> 
                                   <Box className="flex items-baseline gap-3 pl-2">
                                       {" "}
-                                      <Icon>
-                                        {" "}
-                                        <TriangleDownIcon w="10px" h="10  px" />
-                                      </Icon>
-                                      <Box>{items.HouseName}</Box>{" "}
+                                         {" "}
+                                        <i className="fa fa-home" aria-hidden="true"></i>
+                                       <Box>{items.HouseName}</Box>{" "}
                                     </Box>
                                     <Box className="flex items-center gap-3 pl-2 ">
-                                      <UnlockIcon 
-                                        color={
-                                          items.Status === "Not Payed"
-                                            ? "Red"
-                                            : items.Status === "Pending"
-                                            ? "yellow"
-                                            : "green.300"
-                                        }
-                                      />
+                                    <i className="fa fa-thumb-tack" aria-hidden="true"></i>
+
+                                        {/* <UnlockIcon 
+                                          color={
+                                            items.Status === "Not Payed"
+                                              ? "Red"
+                                              : items.Status === "Pending"
+                                              ? "yellow"
+                                              : "green.300"
+                                          }
+                                        /> */}
                                       <Box>{items.HouseLocation}</Box>
                                     </Box>
                                   </Stack>
