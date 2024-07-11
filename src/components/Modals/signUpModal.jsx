@@ -18,7 +18,7 @@ import SignUpComponent from "../inputSignupComponent";
       <>
         <Button
           bgColor="transparent"
-          onClick={onOpen}
+      onClick={()=>handleNaviagtiontoHouse("sign-in")}
           className="w-fit bg-rgba(33,113,3)"
         >
           <i

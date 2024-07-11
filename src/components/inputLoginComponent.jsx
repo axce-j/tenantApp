@@ -7,7 +7,7 @@ import AllFunctions from "./functions";
 import PropTypes from "prop-types";
 
 
-function FormikExample() {
+function InputLoginComponent() {
   const { handleNaviagtiontoHouse } = AllFunctions();
     function validateName(value) {
       let error
@@ -33,7 +33,7 @@ function FormikExample() {
           <Form>
             <Field name='Email' validate={validateName}>
               {({ field, form }) => (
-                <Box>
+                <Box className="flex flex-col gap-3">
                 <FormControl isInvalid={form.errors.name && form.touched.name}>
                   <FormLabel>Username/Email</FormLabel>
                   <Input {...field[0]} placeholder='Email' />
@@ -50,8 +50,10 @@ function FormikExample() {
                 
               )}
             </Field>
+            
             <Button
-              mt={4}
+              mt={8}
+              w="100%"
               colorScheme='teal'
               isLoading={props.isSubmitting}
               type='submit'
@@ -64,7 +66,7 @@ function FormikExample() {
       </Formik>
     )
   }
-  export default FormikExample
-  FormikExample.propTypes = {
+  export default InputLoginComponent
+  InputLoginComponent.propTypes = {
     isSubmitting: PropTypes.any
  };

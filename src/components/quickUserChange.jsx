@@ -62,7 +62,7 @@ const QuickUserChange = (props) => {
                   <Input {...field[1]} placeholder="Paul" />
                   <FormErrorMessage>{form.errors.name}</FormErrorMessage>
                 </FormControl>
-                <FormControl isInvalid={form.errors.name && form.touched.name}>
+                <FormControl isInvalid={form.errors.houseId && form.touched.houseId}>
                   <FormLabel> Select HouseId</FormLabel>
                   <Select placeholder="Select option">
                     <option value="option1">Option 1</option>
@@ -73,7 +73,7 @@ const QuickUserChange = (props) => {
                   <FormErrorMessage>{form.errors.name}</FormErrorMessage>
                 </FormControl>
 
-                <FormControl isInvalid={form.errors.name && form.touched.name}>
+                <FormControl isInvalid={form.errors.appId && form.touched.appId}>
                   <FormLabel>Select AppartmentId</FormLabel>
                   <Select placeholder="Select Appartment Id">
                     {tenantsNames[0] &&
