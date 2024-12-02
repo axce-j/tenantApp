@@ -18,7 +18,11 @@ export default defineConfig({
         background_color: "#ffffff",
         theme_color: "#000000",
         icons: [
-        
+          {
+            src: "/src/assets/home-page-brown.png",
+            sizes: "512x512",
+            type: "image/png"
+          }
         ]
       },
       workbox: {
