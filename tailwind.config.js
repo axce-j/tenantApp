@@ -17,6 +17,7 @@ export default {
 
     },
     extend: {
+      
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
         "bounce-effect": "bounce 4s ease-in-out infinite",
