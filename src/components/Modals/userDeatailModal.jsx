@@ -21,7 +21,7 @@ import {
   // import AllFunctions from "./functions";
   import PropTypes from "prop-types";
   
-  import noUsers from "../../assets/No-users-3.png";
+  import noUsers from "../../../public/No-users-3.png"
   import AllFunctions from "../functions";
   
   function UserDetailModal(props) {

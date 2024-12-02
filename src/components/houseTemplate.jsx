@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import AllFunctions from "./functions";
 import houseImage from "../assets/home-page-brown-2.png";
 import eyeIcon from "../assets/eye-icon.png";
-import noUsers from "../assets/No-users-3.png";
+import noUsers from "../../public/No-users-3.png";
 import userImage from "../assets/tenantImage5.png";
 import ChangeUserModal from "./Modals/changeUserModal";
 // import AllFunctions from "../components/functions";
