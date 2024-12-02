@@ -8,28 +8,28 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate', // Automatically update the service worker
-      manifest: {
-        name: "TenantApp",
-        short_name: "TenantApp",
-        description: "A tenant management application.",
-        start_url: "/tenantapp/index.html",
-        scope: "/tenantapp/",
-        display: "standalone",
-        background_color: "#ffffff",
-        theme_color: "#000000",
-        icons: [
-          {
-            src: "/src/assets/home-page-brown.png",
-            sizes: "512x512",
-            type: "image/png"
-          },
-          {
-            src: "/src/assets/home-page-brown-2.png",
-            sizes: "512x512",
-            type: "image/png"
-          }
-        ]
-      },
+      // manifest: {
+      //   name: "TenantApp",
+      //   short_name: "TenantApp",
+      //   description: "A tenant management application.",
+      //   start_url: "/tenantapp/index.html",
+      //   scope: "/tenantapp/",
+      //   display: "standalone",
+      //   background_color: "#ffffff",
+      //   theme_color: "#000000",
+      //   icons: [
+      //     {
+      //       src: "/src/assets/home-page-brown.png",
+      //       sizes: "512x512",
+      //       type: "image/png"
+      //     },
+      //     {
+      //       src: "/src/assets/home-page-brown-2.png",
+      //       sizes: "512x512",
+      //       type: "image/png"
+      //     }
+      //   ]
+      // },
       workbox: {
         runtimeCaching: [
           {
