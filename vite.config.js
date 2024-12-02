@@ -22,7 +22,18 @@ export default defineConfig({
             src: "/src/assets/home-page-brown.png",
             sizes: "512x512",
             type: "image/png"
+          },
+          {
+            src: "/src/assets/home-page-brown-2.png",
+            sizes: "512x512",
+            type: "image/png"
+          },
+          {
+            src: "/src/assets/home-page-white-2.png",
+            sizes: "512x512",
+            type: "image/png"
           }
+          
         ]
       },
       workbox: {
