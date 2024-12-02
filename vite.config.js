@@ -19,10 +19,10 @@ export default defineConfig({
         theme_color: "#000000",
         icons: [
           {
-            src: "/src/assets/home-page-brown.png",
+            src: "/tenantapp/home-page-brown.png", // Updated path
             sizes: "512x512",
             type: "image/png"
-          } 
+          }
         ]
       },
       workbox: {
