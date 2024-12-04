@@ -14,8 +14,9 @@ import {
   
 // import SignUpComponent from "../inputSignupComponent";
 import { EditIcon } from "@chakra-ui/icons";
-import QuickUserChange from "../quickUserChange";
-  function ChangeUserModal(props) {
+// import QuickUserChange from "../quickUserChange";
+import QuickHouseChange from "../quickHouseChange";
+  function ChangeHouseModal(props) {
     const { isOpen, onOpen, onClose } = useDisclosure();
     // const { houseNames, handleNaviagtiontoHouse } = AllFunctions();
     const tenantsNames= props.tenantsNames
@@ -36,11 +37,11 @@ import QuickUserChange from "../quickUserChange";
           <ModalOverlay />
           <Box>
             <ModalContent   w="80vw">
-              <ModalHeader>Create New Tenant</ModalHeader>
+              <ModalHeader>Create New House</ModalHeader>
               <ModalCloseButton />
               <ModalBody>
                 <Box className="flex flex-col gap-3">
-                  <QuickUserChange tenantsNames={tenantsNames} />
+                  <QuickHouseChange tenantsNames={tenantsNames} />
                   {/* <Button
                         key={index}
                         colorScheme="green"
@@ -58,8 +59,8 @@ import QuickUserChange from "../quickUserChange";
       </>
     );
   }
-  export default ChangeUserModal;
+  export default ChangeHouseModal;
   
-  ChangeUserModal.propTypes = {
+  ChangeHouseModal.propTypes = {
     tenantsNames: PropTypes.arrayOf(PropTypes.any)
   };

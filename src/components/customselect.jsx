@@ -22,30 +22,14 @@ function CustomSelect() {
   
     <AccordionItem>
 
-  <AccordionButton>tt</AccordionButton>
+  <AccordionButton>Month</AccordionButton>
     </AccordionItem>
     <AccordionItem>dd</AccordionItem>
   
 </Accordion>
 
 
-      {/* <Menu  closeOnSelect={customValue && customValue == "Custome Time" ? false : null}>
-        <MenuButton as={Button} width="100%">
-          {customValue}
-        </MenuButton>
-        
-        <MenuList>
-          <MenuItem onClick={() => handleSelectionClick('Monthly')}>
-            Monthly
-          </MenuItem>
-          <MenuItem onClick={() => handleSelectionClick('Annually')}>
-            Annually
-          </MenuItem>
-          <MenuItem onClick={() => handleSelectionClick('Custom Time')}>Custom Time</MenuItem>
-          <MenuItem onClick={() => handleSelectionClick("value")}> <Input></Input></MenuItem>
-
-        </MenuList>
-      </Menu> */}
+       
     </Box>
   );
 }

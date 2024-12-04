@@ -44,7 +44,7 @@ const SignIn = () => {
               </button>
             </Box>
             <Box className="text-center">
-              Don't have an Account ?{" "}
+              Do not have an Account ?{" "}
               <button className="text-teal-700 font-medium" onClick={() => handleNaviagtiontoHouse("sign-up")}>
                 {" "}
                 Signup

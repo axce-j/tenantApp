@@ -9,6 +9,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import HouseDetails from "./Pages/HouseDetails/houseDetails.jsx";
 import SignUp from "./Pages/Register/signup.jsx";
 import SignIn from "./Pages/Register/signin.jsx";
+import HouseAppDetails from "./Pages/HouseDetails/houseAppDetails.jsx";
 
 function App() {
   return (
@@ -21,19 +22,19 @@ function App() {
      min-w-[240px]  
      "
     >
-      <Routes>
+       <Routes>
         <Route path="/" element={<Welcome />} />
-
-        <Route path="/sign-up" element={<SignUp/>} />
-        <Route path="/sign-in" element={<SignIn/>} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/sign-in" element={<SignIn />} />
         <Route path="/home" element={<Home />} />
         <Route path="/campYabbassi" element={<CampYabbHouse />} />
         <Route path="/chantier" element={<ChantierHouse />} />
         <Route path="/gareRoutier" element={<GarRouteHouse />} />
         <Route path="/village" element={<VillageHouse />} />
-        <Route path="/houseDetails" element={<HouseDetails />} />
+        <Route path="/houseDetails/:houseId" element={<HouseDetails />} />
+        <Route path="/houseAppDetails" element={<HouseAppDetails />} />
 
-        <Route path="error" />
+        {/* <Route path="*" element={<NotFound />} /> Catch-all route for 404 */}
       </Routes>
     </div>
   );
