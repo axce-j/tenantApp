@@ -2,6 +2,7 @@
  
 import AllFunctions from "../../components/functions";
 import HouseTemplate from "../../components/houseTemplate";
+import HousingTemplate from "../../components/housingTemplate";
 
 const CampYabbHouse = () => {
   // const tenantsNames=tenantsNamesCampYabb
@@ -11,7 +12,7 @@ const CampYabbHouse = () => {
     
   return(
 
-    <HouseTemplate tenantDetails={tenantDetailsCampYabb} tenantsNames={tenantsNamesCampYabb}/>
+    <HousingTemplate tenantDetails={tenantDetailsCampYabb} tenantsNames={tenantsNamesCampYabb}/>
       )
     
 };

@@ -1,6 +1,7 @@
  
 import AllFunctions from "../../components/functions";
 import HouseTemplate from "../../components/houseTemplate";
+import HousingTemplate from "../../components/housingTemplate";
 
 const VillageHouse = () => {
 
@@ -10,7 +11,7 @@ const VillageHouse = () => {
 const {tenantDetailsVillage,tenantsNamesVillage} = AllFunctions();
   return(
 
-<HouseTemplate tenantDetails={tenantDetailsVillage} tenantsNames={tenantsNamesVillage}/>
+<HousingTemplate tenantDetails={tenantDetailsVillage} tenantsNames={tenantsNamesVillage}/>
   )
 
 
